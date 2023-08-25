@@ -7,7 +7,10 @@ public class PlayerContoller : MonoBehaviour
 {
     // Start is called before the first frame update
     public Vector3 initial_position = new Vector3 (-1f, -3.5f ,0f);
+    GameObject Camera;
     void Start() {
+        this.Camera = GameObject.Find("Main Camera");
+        this.Camera.transform.position = new Vector3(0, 0, -10);
         transform.position = initial_position;
     }
 
