@@ -4,9 +4,12 @@ using UnityEngine;
 
 namespace Cainos.PixelArtTopDown_Basic
 {
+
+
     public class TopDownCharacterController : MonoBehaviour
     {
         public float speed;
+        public bool canPlayerMove = true ;
 
         private Animator animator;
 
@@ -19,7 +22,11 @@ namespace Cainos.PixelArtTopDown_Basic
         private void Update()
         {
             Vector2 dir = Vector2.zero;
-            if (Input.GetKey(KeyCode.A))
+            if(!canPlayerMove)
+            {
+                dir.x = 0;
+            }
+            else if (Input.GetKey(KeyCode.A))
             {
                 dir.x = -1;
                 animator.SetInteger("Direction", 3);
