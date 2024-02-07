@@ -10,8 +10,8 @@ public class Intro : MonoBehaviour
 {
     // Start is called before the first frame update
     FlowerSystem fs;
-    //public GameObject TopDownCharacterController;
-    //TopDownCharacterController  = GameObject.Find("Player");
+    //public GameObject player = GameObject.Find("Player");
+   
     void Start()
     {
         fs = FlowerManager.Instance.CreateFlowerSystem("default", false);
@@ -19,7 +19,7 @@ public class Intro : MonoBehaviour
         //initial Flower System
         fs.ReadTextFromResource("intro");
         /*fs.RegisterCommand("lock_player",(List<string> _params)=>{   
-            player.GetComponent<TopDownCharacterController>().canPlayerMove = false;
+            player.GetComponentInParent<TopDownCharacterController>().canPlayerMove = false;
         });*/
     }
 
