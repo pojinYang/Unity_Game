@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 41482115}
   - component: {fileID: 41482116}
   - component: {fileID: 41482117}
+  - component: {fileID: 41482118}
   m_Layer: 0
   m_Name: pharmacist
   m_TagString: Untagged
@@ -255,6 +256,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!58 &41482118
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41482113}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2
 --- !u!1 &91147056
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,6 +284,7 @@ GameObject:
   - component: {fileID: 91147058}
   - component: {fileID: 91147059}
   - component: {fileID: 91147060}
+  - component: {fileID: 91147061}
   m_Layer: 0
   m_Name: knight
   m_TagString: Untagged
@@ -387,6 +405,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!58 &91147061
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91147056}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000009536743, y: 0.0000038146973}
+  serializedVersion: 2
+  m_Radius: 2
 --- !u!1 &92542996
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,6 +433,7 @@ GameObject:
   - component: {fileID: 92542998}
   - component: {fileID: 92542999}
   - component: {fileID: 92543000}
+  - component: {fileID: 92543001}
   m_Layer: 0
   m_Name: bridge builder
   m_TagString: Untagged
@@ -519,6 +554,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!58 &92543001
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92542996}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.0000019073486}
+  serializedVersion: 2
+  m_Radius: 2
 --- !u!1 &269242056
 GameObject:
   m_ObjectHideFlags: 3
@@ -919,6 +970,7 @@ GameObject:
   - component: {fileID: 328930757}
   - component: {fileID: 328930756}
   - component: {fileID: 328930758}
+  - component: {fileID: 328930759}
   m_Layer: 0
   m_Name: gardener
   m_TagString: Untagged
@@ -1039,6 +1091,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!58 &328930759
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328930754}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2
 --- !u!1 &408493706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,6 +1119,7 @@ GameObject:
   - component: {fileID: 408493708}
   - component: {fileID: 408493709}
   - component: {fileID: 408493710}
+  - component: {fileID: 408493711}
   m_Layer: 0
   m_Name: Explosive Kid
   m_TagString: Untagged
@@ -1171,6 +1240,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!58 &408493711
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408493706}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2
 --- !u!1 &467216820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1269,7 @@ GameObject:
   - component: {fileID: 467216821}
   - component: {fileID: 467216824}
   - component: {fileID: 467216825}
+  - component: {fileID: 467216826}
   m_Layer: 0
   m_Name: next2stair
   m_TagString: Untagged
@@ -1320,6 +1406,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.0000009536743}
   serializedVersion: 2
   m_Radius: 2
+--- !u!114 &467216826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467216820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a477bfe7b4e6631459cc8dfdc1d5dabb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNear: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -107796,6 +107895,7 @@ GameObject:
   - component: {fileID: 1522682509}
   - component: {fileID: 1522682508}
   - component: {fileID: 1522682510}
+  - component: {fileID: 1522682511}
   m_Layer: 0
   m_Name: Witch
   m_TagString: Untagged
@@ -107916,6 +108016,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.2, y: 2.2}
   m_EdgeRadius: 0
+--- !u!58 &1522682511
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522682506}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2
 --- !u!1 &1683625356
 GameObject:
   m_ObjectHideFlags: 0
@@ -108035,7 +108151,7 @@ GameObject:
   - component: {fileID: 2022116161}
   - component: {fileID: 2022116160}
   m_Layer: 0
-  m_Name: dialog
+  m_Name: hint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

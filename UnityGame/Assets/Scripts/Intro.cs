@@ -15,7 +15,7 @@ public class Intro : MonoBehaviour
     void Start()
     {
         player1 = GameObject.Find("Player");
-        fs = FlowerManager.Instance.CreateFlowerSystem("default", false);
+        fs= FlowerManager.Instance.GetFlowerSystem("default");
         fs.SetupDialog();
 
         //initial Flower System
