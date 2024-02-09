@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Flower;
 
-public class next2stairController : MonoBehaviour
+public class nonameController : MonoBehaviour
 {
     public bool isNear = false;
     FlowerSystem fs;
@@ -37,8 +37,8 @@ public class next2stairController : MonoBehaviour
             
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
-                    if(backpack.GetComponent<BackPackItem>().stage==1)
-                        fs.ReadTextFromResource("stage 1");
+                    if(backpack.GetComponent<BackPackItem>().stage==2)
+                        fs.ReadTextFromResource("stage 2");
                     else{
                         fs.ReadTextFromResource("other");
                         
