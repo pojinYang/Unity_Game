@@ -107793,10 +107793,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a91b31ee575bec74aac0d9403c34a6ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slate: 0
+  invisible_lens: 0
+  herb: 0
+  stone_plate: 0
+  fire_flower: 0
+  plant_ginhua: 0
   fire: 0
-  flower: 0
+  treasure: 0
+  sword: 0
+  sword_key: 0
+  treasure_key: 0
   ash: 0
+  fire_ginhua: 0
+  rocket: 0
 --- !u!4 &1160767204
 Transform:
   m_ObjectHideFlags: 0
@@ -108218,7 +108227,7 @@ Transform:
   m_GameObject: {fileID: 2022116159}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.9, y: -8.45, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
