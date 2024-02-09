@@ -1,0 +1,6 @@
+[lock_player]
+[show]
+凌亂的雜物中若隱若現著一副隱形眼鏡。[w]
+獲得<隱形眼鏡>![w]
+[release_player]
+[hide]
