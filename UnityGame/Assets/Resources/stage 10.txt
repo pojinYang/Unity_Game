@@ -1,0 +1,5 @@
+[lock_player]
+[show]
+<建橋師>：這些橋是一年比一年脆弱了...[w]
+[release_player]
+[hide]

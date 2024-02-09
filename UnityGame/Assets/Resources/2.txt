@@ -1,5 +1,0 @@
-[lock_player]
-[show]
-(去找{+空地上的NPC}求助看看)[w]
-[hide]
-[unlock_player]
