@@ -27,6 +27,10 @@ public class next2stairController : MonoBehaviour
         
         if(isNear){
             
+
+            
+
+            
             
             
             if(Input.GetKeyDown(KeyCode.Space)){
