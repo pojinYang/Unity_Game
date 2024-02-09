@@ -12,6 +12,7 @@
 遇到人物或物品可以按下空白鍵來互動[w]
 [hide]
 [unlock_player]
+[next_stage,2]
 
 
 

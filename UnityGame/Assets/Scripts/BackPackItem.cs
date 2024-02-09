@@ -19,10 +19,10 @@ public class BackPackItem : MonoBehaviour
     public bool fire_ginhua = false;  //火焰精華
     public bool rocket = false; //火箭
 
-
+    public int stage;
     void Start()
     {
-        
+        stage = 1;
     }
 
     // Update is called once per frame

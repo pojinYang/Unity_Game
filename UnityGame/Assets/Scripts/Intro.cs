@@ -12,20 +12,32 @@ public class Intro : MonoBehaviour
     FlowerSystem fs;
    
     public GameObject player1;
+    public GameObject backpack;
     void Start()
     {
+        backpack = GameObject.Find("Backpack");
         player1 = GameObject.Find("Player");
         fs= FlowerManager.Instance.GetFlowerSystem("default");
         fs.SetupDialog();
 
         //initial Flower System
-        fs.ReadTextFromResource("intro");
+        
         fs.RegisterCommand("lock_player",(List<string> _params)=>{   
             player1.GetComponentInParent<TopDownCharacterController>().canPlayerMove = false;
         });
         fs.RegisterCommand("unlock_player",(List<string> _params)=>{   
             player1.GetComponentInParent<TopDownCharacterController>().canPlayerMove = true;
         });
+            fs.RegisterCommand("release_player",(List<string> _params)=>{   
+            player1.GetComponentInParent<TopDownCharacterController>().canPlayerMove = true;
+        });
+        fs.RegisterCommand("next_stage",(List<string> _params)=>{   
+            backpack.GetComponentInParent<BackPackItem>().stage =int.Parse(_params[0]) ;
+        });
+        fs.ReadTextFromResource("intro");
+        
+        
+
     }
 
     // Update is called once per frame
