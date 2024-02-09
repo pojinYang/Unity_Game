@@ -37,11 +37,10 @@ public class next2stairController : MonoBehaviour
             
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
-                    if(backpack.GetComponent<BackPackItem>().stage==2)
-                        fs.ReadTextFromResource("1");
-                        
+                    if(backpack.GetComponent<BackPackItem>().stage==1)
+                        fs.ReadTextFromResource("stage 1");
                     else{
-                        fs.ReadTextFromResource("2");
+                        fs.ReadTextFromResource("stage 2");
                         
                     }
                     setup = true;
