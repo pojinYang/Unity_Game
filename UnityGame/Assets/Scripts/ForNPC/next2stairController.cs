@@ -10,9 +10,11 @@ public class next2stairController : MonoBehaviour
     // Start is called before the first frame update
     bool setup = false;
     GameObject hint;
+    GameObject backpack;
     Vector3 Pos = new Vector3(0, 0, 0);
     void Start()
     {   
+        backpack = GameObject.Find("Backpack");
         Pos = transform.localPosition;
         Pos.x-=1.59f;
         Pos.y-=0.7f;
@@ -35,7 +37,13 @@ public class next2stairController : MonoBehaviour
             
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
-                    fs.ReadTextFromResource("next2stair_talk");
+                    if(backpack.GetComponent<BackPackItem>().stage==2)
+                        fs.ReadTextFromResource("1");
+                        
+                    else{
+                        fs.ReadTextFromResource("2");
+                        
+                    }
                     setup = true;
                 }else{
 
