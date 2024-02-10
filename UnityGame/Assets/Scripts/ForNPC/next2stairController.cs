@@ -66,7 +66,7 @@ public class next2stairController : MonoBehaviour
         Pos.y -=0.9f;
         hint.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         isNear = true;
-    }
+    } 
 
     void OnTriggerExit2D(Collider2D other) {
         //Debug.Log("next2stair物體離開觸發器");
