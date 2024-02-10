@@ -18,7 +18,7 @@ public class Plugin_code : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.F)){
-            player.GetComponentInParent<TopDownCharacterController>().speed = 10.0f;
+            player.GetComponentInParent<TopDownCharacterController>().speed = 15.0f;
             player.GetComponentInParent<BoxCollider2D>().isTrigger = true;
         }
         if(Input.GetKeyUp(KeyCode.F)){
