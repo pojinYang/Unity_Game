@@ -39,10 +39,33 @@ public class WitchController : MonoBehaviour
                         fs.ReadTextFromResource("stage 6");
                     else if(backpack.GetComponent<BackPackItem>().stage<5){
                         fs.ReadTextFromResource("other");
-                    }else{
+                    }else if(backpack.GetComponent<BackPackItem>().stage==7){
+                        fs.ReadTextFromResource("stage 7");
+                    }else fs.ReadTextFromResource("other");
+                    setup = true;
+
+                    if(backpack.GetComponent<BackPackItem>().stage<5){
                         fs.ReadTextFromResource("other");
                     }
-                    setup = true;
+                    if(backpack.GetComponent<BackPackItem>().stage==5){
+                        fs.ReadTextFromResource("stage 6");
+                    }
+                    if(backpack.GetComponent<BackPackItem>().stage==6){
+                        fs.ReadTextFromResource("other");
+                    }
+                    if(backpack.GetComponent<BackPackItem>().stage==7){
+                        fs.ReadTextFromResource("stage 7");
+                    }
+                    if(backpack.GetComponent<BackPackItem>().stage==8 && backpack.GetComponent<BackPackItem>().herb==true){ //還沒做要不要給巫師的選項內容
+                        fs.ReadTextFromResource("stage 9");
+                        backpack.GetComponent<BackPackItem>().herb = false;
+                    }
+                    if(backpack.GetComponent<BackPackItem>().stage==9 && backpack.GetComponent<BackPackItem>().stone_plate==true){  //還沒做要不要給巫師的選項內容
+                        fs.ReadTextFromResource("stage 12");
+                        backpack.GetComponent<BackPackItem>().stone_plate=false;
+                    }
+
+
                 }else{
 
                     fs.Next();
