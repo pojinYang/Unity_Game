@@ -6,3 +6,4 @@
 <巫師>：看我把你抓起來!![w]
 [release_player]
 [hide]
+[next_stage,6]

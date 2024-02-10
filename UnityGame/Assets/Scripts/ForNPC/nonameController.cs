@@ -41,6 +41,7 @@ public class nonameController : MonoBehaviour
                     else{
                         if(backpack.GetComponent<BackPackItem>().invisible_lens == true && backpack.GetComponent<BackPackItem>().stage==3){
                             fs.ReadTextFromResource("stage 3");
+                            backpack.GetComponent<BackPackItem>().invisible_lens = false;
                         }else{
                             fs.ReadTextFromResource("other");
                         }
