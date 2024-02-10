@@ -1,0 +1,5 @@
+[lock_player]
+[show]
+(普通的草)[w]
+[release_player]
+[hide]
