@@ -1,0 +1,6 @@
+[lock_player]
+[show]
+<農夫>：先去魏曲銘那邊問問看吧，他在石製地板的地方。[w]
+<農夫>：祝你好運。[w]
+[release_player]
+[hide]

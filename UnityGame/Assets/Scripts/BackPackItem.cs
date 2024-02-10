@@ -20,9 +20,11 @@ public class BackPackItem : MonoBehaviour
     public bool rocket = false; //火箭
 
     public int stage;
+    public int stage2;
     void Start()
     {
         stage = 1;
+        stage2 = 1;
     }
 
     // Update is called once per frame

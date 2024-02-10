@@ -35,14 +35,20 @@ public class CowBoyController : MonoBehaviour
             
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
-                    if(backpack.GetComponent<BackPackItem>().stage==4 || backpack.GetComponent<BackPackItem>().stage==5)
+
+                    if(backpack.GetComponent<BackPackItem>().stage<4)
+                        fs.ReadTextFromResource("other 4");
+                    if(backpack.GetComponent<BackPackItem>().stage==4){
                         fs.ReadTextFromResource("stage 4");
-                    else if(backpack.GetComponent<BackPackItem>().stage>5){
-                        fs.ReadTextFromResource("stage 5");
-                        
-                    }else{
-                        fs.ReadTextFromResource("other");
                     }
+                    if(backpack.GetComponent<BackPackItem>().stage==5){
+                        fs.ReadTextFromResource("stage 4");
+                    }
+                    if(backpack.GetComponent<BackPackItem>().stage>5){
+                        fs.ReadTextFromResource("stage 5");
+                    }
+
+
                     setup = true;
                 }else{
 
