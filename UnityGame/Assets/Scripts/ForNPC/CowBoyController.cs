@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Flower;
 
-public class WitchController : MonoBehaviour
+public class CowBoyController : MonoBehaviour
 {
     public bool isNear = false;
     FlowerSystem fs;
@@ -35,10 +35,11 @@ public class WitchController : MonoBehaviour
             
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
-                    if(backpack.GetComponent<BackPackItem>().stage==5)
-                        fs.ReadTextFromResource("stage 6");
-                    else if(backpack.GetComponent<BackPackItem>().stage<5){
-                        fs.ReadTextFromResource("other");
+                    if(backpack.GetComponent<BackPackItem>().stage==4 || backpack.GetComponent<BackPackItem>().stage==5)
+                        fs.ReadTextFromResource("stage 4");
+                    else if(backpack.GetComponent<BackPackItem>().stage>5){
+                        fs.ReadTextFromResource("stage 5");
+                        
                     }else{
                         fs.ReadTextFromResource("other");
                     }
