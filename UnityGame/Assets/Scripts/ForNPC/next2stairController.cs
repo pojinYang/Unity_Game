@@ -16,8 +16,6 @@ public class next2stairController : MonoBehaviour
     {   
         backpack = GameObject.Find("Backpack");
         Pos = transform.localPosition;
-        Pos.x =1.76f;
-        Pos.y =-9.28f;
         hint = GameObject.Find("hint");
         fs= FlowerManager.Instance.GetFlowerSystem("default");
         
@@ -40,7 +38,7 @@ public class next2stairController : MonoBehaviour
                     if(backpack.GetComponent<BackPackItem>().stage==1)
                         fs.ReadTextFromResource("stage 1");
                     else{
-                        fs.ReadTextFromResource("other");
+                        fs.ReadTextFromResource("other 1");
                         
                     }
                     setup = true;

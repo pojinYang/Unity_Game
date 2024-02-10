@@ -1,0 +1,5 @@
+[lock_player]
+[show]
+<魏曲銘>：去找牧童吧。他應該很擔心他的羊駝。[w]
+[release_player]
+[hide]

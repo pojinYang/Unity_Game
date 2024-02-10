@@ -1,0 +1,5 @@
+[lock_player]
+[show]
+<魏曲銘>：嗯？我的隱形眼鏡呢？[w]
+[release_player]
+[hide]
