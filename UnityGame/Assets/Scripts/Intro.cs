@@ -32,8 +32,12 @@ public class Intro : MonoBehaviour
             player1.GetComponentInParent<TopDownCharacterController>().canPlayerMove = true;
         });
         fs.RegisterCommand("next_stage",(List<string> _params)=>{   
-            backpack.GetComponentInParent<BackPackItem>().stage =int.Parse(_params[0]) ;
+            backpack.GetComponent<BackPackItem>().stage =int.Parse(_params[0]) ;
         });
+        /*fs.RegisterCommand("play_game",(List<string> _params)=>{   
+            
+        });*/
+
         fs.ReadTextFromResource("stage intro");
         
         
