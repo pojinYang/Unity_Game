@@ -51,7 +51,7 @@ public class WitchController : MonoBehaviour
                         fs.ReadTextFromResource("stage 6");
                     }
                     if(backpack.GetComponent<BackPackItem>().stage==6){
-                        fs.ReadTextFromResource("other");
+                        //fs.ReadTextFromResource("other");
                     }
                     if(backpack.GetComponent<BackPackItem>().stage==7){
                         fs.ReadTextFromResource("stage 7");

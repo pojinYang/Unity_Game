@@ -21,15 +21,42 @@ public class BackPackItem : MonoBehaviour
 
     public int stage;
     public int stage2;
+    public int Ghost_Game1=0;
+    /* 0:未開始
+       1:進行中
+       2:結束
+    */
+    GameObject fist;
+    GameObject player;
     void Start()
     {
+        fist=GameObject.Find("Ghost_Game");
+        player=GameObject.Find("Player");
         stage = 1;
         stage2 = 1;
     }
 
     // Update is called once per frame
     void Update()
-    {
-        
+    {   
+        if(stage==6&&Ghost_Game1==0){
+            player.transform.position = new Vector3(-191.7f, -10.7f, 0);
+            Ghost_Game1=1;
+            fist.GetComponent<fistGenerator>().isHit=false;
+            fist.GetComponent<fistGenerator>().times=0;
+            player.transform.GetChild(2).gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        }
+        else if(Ghost_Game1==1&&stage==6){
+            fist.GetComponent<fistGenerator>().Playing();
+        }
+        else if(Ghost_Game1==2){
+            if(fist.GetComponent<fistGenerator>().isHit)
+                stage=5;
+            else
+                stage=7;
+            player.transform.position = new Vector3(-22.9f, -5.8f, 0);
+            player.transform.GetChild(2).gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            Ghost_Game1=0;
+        }
     }
 }
