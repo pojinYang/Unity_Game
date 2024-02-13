@@ -35,7 +35,7 @@ public class godController : MonoBehaviour
                 fs.SetupButton("......",()=>{
                     //fs.Resume();
                     fs.RemoveButtonGroup();
-                    fs.ReadTextFromResource("other");
+                    fs.ReadTextFromResource("other 27");
                 });
 
                 // 祭祀之火->火焰花
@@ -43,7 +43,7 @@ public class godController : MonoBehaviour
                     fs.SetupButton("祭祀之火",()=>{
                     //fs.Resume();
                     fs.RemoveButtonGroup();
-                    fs.ReadTextFromResource("other0");
+                    fs.ReadTextFromResource("other 23");
                     backpack.GetComponent<BackPackItem>().fire = false;
                     backpack.GetComponent<BackPackItem>().fire_flower = true;
                     });
@@ -54,7 +54,7 @@ public class godController : MonoBehaviour
                     fs.SetupButton("火焰精華",()=>{
                     //fs.Resume();
                     fs.RemoveButtonGroup();
-                    fs.ReadTextFromResource("other0");
+                    fs.ReadTextFromResource("other 24");
                     backpack.GetComponent<BackPackItem>().fire_ginhua = false;
                     backpack.GetComponent<BackPackItem>().plant_ginhua = true;
                     
@@ -66,7 +66,7 @@ public class godController : MonoBehaviour
                     fs.SetupButton("灰燼",()=>{
                     //fs.Resume();
                     fs.RemoveButtonGroup();
-                    fs.ReadTextFromResource("other0");
+                    fs.ReadTextFromResource("other 25");
                     backpack.GetComponent<BackPackItem>().ash = false;
                     backpack.GetComponent<BackPackItem>().herb = true;
                     
@@ -78,7 +78,7 @@ public class godController : MonoBehaviour
                     fs.SetupButton("火箭",()=>{
                     //fs.Resume();
                     fs.RemoveButtonGroup();
-                    fs.ReadTextFromResource("other0");
+                    fs.ReadTextFromResource("other 26");
                     backpack.GetComponent<BackPackItem>().rocket = false;
                     backpack.GetComponent<BackPackItem>().sword = true;
                     
