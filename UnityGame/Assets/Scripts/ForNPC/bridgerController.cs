@@ -38,7 +38,10 @@ public class bridgerController : MonoBehaviour
                     if(backpack.GetComponent<BackPackItem>().stage==8 && backpack.GetComponent<BackPackItem>().stone_plate == false){
                         fs.ReadTextFromResource("stage 11");
                         backpack.GetComponent<BackPackItem>().stone_plate = true;
+
+
                         // 還沒做逃跑動畫
+                        
                     }
                     else{
                         fs.ReadTextFromResource("stage 10");

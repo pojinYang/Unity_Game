@@ -13,12 +13,15 @@ public class box_of_sword : MonoBehaviour
     Vector3 Pos = new Vector3(0, 0, 0);
     bool setup = false;
     // Start is called before the first frame update
+
+    public Sprite box_open;
     void Start()
     {
         backpack = GameObject.Find("Backpack");
         Pos = transform.localPosition;
         hint = GameObject.Find("hint");
         fs= FlowerManager.Instance.GetFlowerSystem("default");
+        Pos.y +=0.9f;
     }
 
     // Update is called once per frame
@@ -32,6 +35,9 @@ public class box_of_sword : MonoBehaviour
                         fs.ReadTextFromResource("other 7");
                         isOpen = true;
                         backpack.GetComponent<BackPackItem>().sword = true;
+                        GetComponent<SpriteRenderer>().sprite = box_open;
+                        Pos.y +=0.9f;
+                        hint.transform.localPosition = Pos;
                     }else if(!isOpen){
                         fs.ReadTextFromResource("other 6");
                     }else{
@@ -46,9 +52,9 @@ public class box_of_sword : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         Debug.Log("herb物體進入觸發器");
-        Pos.y +=0.9f;
+        
         hint.transform.localPosition = Pos;
-        Pos.y -=0.9f;
+        
         hint.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         isNear = true;
 

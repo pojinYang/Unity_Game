@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Flower;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WitchController : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class WitchController : MonoBehaviour
     FlowerSystem fs;
     // Start is called before the first frame update
     bool setup = false;
+    public bool GameOver = false;
     GameObject hint;
     GameObject backpack;
     Vector3 Pos = new Vector3(0, 0, 0);
@@ -58,6 +61,7 @@ public class WitchController : MonoBehaviour
                     if(backpack.GetComponent<BackPackItem>().stage==10 && backpack.GetComponent<BackPackItem>().fire==true){  //還沒做要不要給巫師的選項內容
                         fs.ReadTextFromResource("stage 17");
                         backpack.GetComponent<BackPackItem>().fire=false;
+                        GameOver = true;
                     }
                     if(backpack.GetComponent<BackPackItem>().stage==9 && backpack.GetComponent<BackPackItem>().stone_plate==true){  //還沒做要不要給巫師的選項內容
                         fs.ReadTextFromResource("stage 12");
@@ -65,10 +69,15 @@ public class WitchController : MonoBehaviour
                         backpack.GetComponent<BackPackItem>().stage = 10;
                     }
 
+
                 }else{
 
                     fs.Next();
-
+                    if(fs.isCompleted&&GameOver){
+                        fs.RemoveDialog();
+                        Destroy(fs);
+                        SceneManager.LoadScene(0);
+                    }
                 }
                                     
                                 
