@@ -1,0 +1,5 @@
+[lock_player]
+[show]
+<碑文>：祭奠[w]
+[release_player]
+[hide]
