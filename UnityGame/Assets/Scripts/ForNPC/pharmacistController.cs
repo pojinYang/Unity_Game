@@ -55,6 +55,7 @@ public class pharmacistController : MonoBehaviour
                     //fs.Resume();
                     fs.RemoveButtonGroup();
                     fs.ReadTextFromResource("other 11");
+                    backpack.GetComponent<BackPackItem>().clue_herb = 1;
                     });
                 }
 

@@ -35,8 +35,11 @@ public class knightController : MonoBehaviour
             
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
-                    fs.ReadTextFromResource("other 20");
-                    
+                    if(backpack.GetComponent<BackPackItem>().clue < 3) fs.ReadTextFromResource("other 20");
+                    else if(backpack.GetComponent<BackPackItem>().clue == 3){
+                        fs.ReadTextFromResource("stage 20");
+                        backpack.GetComponent<BackPackItem>().sword_key = true;
+                    } 
 
 
                     setup = true;
