@@ -1,0 +1,5 @@
+[lock_player]
+[show]
+<小女孩>：是軟綿綿的羊駝先生耶~[w]
+[release_player]
+[hide]
