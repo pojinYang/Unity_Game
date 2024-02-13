@@ -6,7 +6,7 @@ public class FistController : MonoBehaviour
 {
     // Start is called before the first frame update
     int dir;
-    public float speed = 0.05f;
+    public float speed = 0.03f;
     GameObject player;
     void Start()
     {

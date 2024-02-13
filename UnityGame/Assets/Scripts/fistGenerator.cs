@@ -4,9 +4,9 @@ using UnityEngine;
 public class fistGenerator : MonoBehaviour
 {
     public GameObject fist;
-    float span=1.0f;
+    float span=1.0f; //生成間隔
     float delta=0;
-    public bool isHit=false;
+    public bool isHit=false; 
     public int times=0;
     // Start is called before the first frame update
     public void Init()
@@ -23,7 +23,10 @@ public class fistGenerator : MonoBehaviour
         this.delta += Time.deltaTime;
         if(this.delta>this.span){
             this.delta=0;
-            GameObject go = Instantiate(fist) as GameObject;
+            for(int i=0;i<3;i++){
+                GameObject go = Instantiate(fist) as GameObject;
+            }
+                
             times++;
             
         }
