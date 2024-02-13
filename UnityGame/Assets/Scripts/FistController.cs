@@ -39,22 +39,22 @@ public class FistController : MonoBehaviour
         
         //Debug.Log(randomNumber);
         if(dir==1){
-            transform.Translate(0,-1*speed,0);
+            transform.Translate(0,-0.5f*speed,0);
             if(transform.position.y<-20){
                 Destroy(gameObject);
             }
         }else if(dir==2){
-            transform.Translate(0,speed,0);
+            transform.Translate(0,0.5f*speed,0);
             if(transform.position.y>0){
                 Destroy(gameObject);
             }
         }else if(dir==3){
-            transform.Translate(speed,0,0);
+            transform.Translate(0.5f*speed,0,0);
             if(transform.position.x>-176){
                 Destroy(gameObject);
             }
         }else{
-            transform.Translate(-1*speed,0,0);
+            transform.Translate(-0.5f*speed,0,0);
             if(transform.position.x<-206){
                 Destroy(gameObject);
             }
