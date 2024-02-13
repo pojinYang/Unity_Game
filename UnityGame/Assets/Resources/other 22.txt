@@ -1,0 +1,5 @@
+[lock_player]
+[show]
+<長老>：(這裡怎麼有羊駝？)[w]
+[release_player]
+[hide]

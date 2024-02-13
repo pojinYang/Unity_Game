@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Flower;
 
-public class knightController : MonoBehaviour
+public class smartController : MonoBehaviour
 {
     public bool isNear = false;
     FlowerSystem fs;
@@ -35,14 +35,14 @@ public class knightController : MonoBehaviour
             
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
-                    if(backpack.GetComponent<BackPackItem>().clue < 3 && backpack.GetComponent<BackPackItem>().sword == true) fs.ReadTextFromResource("other 21");
-                    else if(backpack.GetComponent<BackPackItem>().clue < 3) fs.ReadTextFromResource("other 20");
-                    else if(backpack.GetComponent<BackPackItem>().clue == 3){
-                        fs.ReadTextFromResource("stage 20");
-                        backpack.GetComponent<BackPackItem>().sword_key = true;
-                    } 
-
-
+                    if(backpack.GetComponent<BackPackItem>().fire == true){
+                        fs.ReadTextFromResource("stage 19");
+                        backpack.GetComponent<BackPackItem>().clue_fire = 1;
+                    }
+                    else{
+                        fs.ReadTextFromResource("other 22");
+                        
+                    }
                     setup = true;
                 }else{
 
@@ -66,7 +66,7 @@ public class knightController : MonoBehaviour
         Pos.y -=0.9f;
         hint.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         isNear = true;
-    }
+    } 
 
     void OnTriggerExit2D(Collider2D other) {
         //Debug.Log("next2stair物體離開觸發器");
