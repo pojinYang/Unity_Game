@@ -19,6 +19,13 @@ public class BackPackItem : MonoBehaviour
     public bool fire_ginhua = false;  //火焰精華
     public bool rocket = false; //火箭
 
+    // 線索紀錄
+    public int clue_herb = 0;
+    public int clue_stone_plate = 0;
+    public int clue_fire = 0;
+    public int clue_grave = 0;
+    public int clue = 0;
+
     public int stage;
     public int stage2;
     public int Ghost_Game1=0;
@@ -39,6 +46,7 @@ public class BackPackItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
+        clue = clue_herb + clue_stone_plate + clue_fire + clue_grave;
         if(stage==6&&Ghost_Game1==0){
             player.transform.position = new Vector3(-191.7f, -10.7f, 0);
             Ghost_Game1=1;
