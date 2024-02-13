@@ -8,7 +8,7 @@ public class UsageCase : MonoBehaviour
 {
     FlowerSystem flowerSys;
     private string myName;
-    private int progress = 0;
+    private int progress = 1;
     private bool pickedUpTheKey = false;
     private bool isGameEnd = false;
     private bool isLocked = false;
@@ -39,16 +39,19 @@ public class UsageCase : MonoBehaviour
         // Your own logic control.
         if(flowerSys.isCompleted && !isGameEnd && !isLocked){
             switch(progress){
-                case 0:
+                /*case 0:
                     flowerSys.ReadTextFromResource("start");
-                    break;
+                    break;*/
                 case 1:
                     flowerSys.ReadTextFromResource("demo_start");
                     break;
                 case 2:
                     flowerSys.SetupButtonGroup();
+                    Debug.Log("Set");
                     if(!pickedUpTheKey){
+                        Debug.Log("Pick");
                         flowerSys.SetupButton("Pickup the key.",()=>{
+                            Debug.Log("Pick up");
                             pickedUpTheKey = true;
                             flowerSys.Resume();
                             flowerSys.RemoveButtonGroup();
@@ -58,6 +61,7 @@ public class UsageCase : MonoBehaviour
                         });
                     }
                     flowerSys.SetupButton("Open the door",()=>{
+                        Debug.Log("Open the door.");
                         if(pickedUpTheKey){
                             flowerSys.Resume();
                             flowerSys.RemoveButtonGroup();

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class Exploser : MonoBehaviour
     GameObject hint;
     GameObject backpack;
     Vector3 Pos = new Vector3(0, 0, 0);
+    bool isLock = false;
+    bool isEnd=false;
     void Start()
     {   
         backpack = GameObject.Find("Backpack");
@@ -27,17 +30,27 @@ public class Exploser : MonoBehaviour
         
         if(isNear){
             
-            if(fs.isCompleted && setup) fs.SetupButtonGroup();
-            if(backpack.GetComponent<BackPackItem>().fire_flower){
+            if(fs.isCompleted&&isEnd==false&&setup&&!isLock){
+                Debug.Log("isCompleted"); 
+                fs.SetupButtonGroup();
+                if(backpack.GetComponent<BackPackItem>().fire_flower){
                     fs.SetupButton("火焰花",()=>{
-                    fs.Resume();
+                    //fs.Resume();
                     fs.RemoveButtonGroup();
-                    fs.ReadTextFromResource("other");
+                    fs.ReadTextFromResource("other0");
                     backpack.GetComponent<BackPackItem>().fire_flower = false;
                     backpack.GetComponent<BackPackItem>().fire = true;
-                    
-                });
+                    isLock = false;
+                    });
+                }
+                isLock = true;
+                isEnd = true;
             }
+
+
+
+            
+            
 
             
             
@@ -49,11 +62,12 @@ public class Exploser : MonoBehaviour
                     
                         
                     
-                    fs.SetupButton("buttom name",()=>{
+                    /*fs.SetupButton("buttom name",()=>{
                                             
-                    });
+                    });*/
 
                     setup = true;
+                    
                 }else{
 
                     fs.Next();
