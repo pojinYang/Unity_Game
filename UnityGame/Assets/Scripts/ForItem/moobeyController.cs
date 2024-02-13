@@ -28,6 +28,7 @@ public class moobeyController : MonoBehaviour
                 if(!setup){
                     setup = true;
                     fs.ReadTextFromResource("moobey");
+                    backpack.GetComponent<BackPackItem>().clue_grave = 1;
                 }
             }
         }
