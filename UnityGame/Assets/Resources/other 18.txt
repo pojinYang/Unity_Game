@@ -1,0 +1,5 @@
+[lock_player]
+[show]
+<園丁>：謝謝你啊，年輕羊駝。[w]
+[release_player]
+[hide]

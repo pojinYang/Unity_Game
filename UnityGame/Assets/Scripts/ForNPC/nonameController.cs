@@ -37,7 +37,7 @@ public class nonameController : MonoBehaviour
                 if(!setup){
                     
                     if(backpack.GetComponent<BackPackItem>().stage==1)
-                        fs.ReadTextFromResource("other");
+                        fs.ReadTextFromResource("other 19");
                     if(backpack.GetComponent<BackPackItem>().stage==2)
                         fs.ReadTextFromResource("stage 2");
                     if(backpack.GetComponent<BackPackItem>().stage==3){

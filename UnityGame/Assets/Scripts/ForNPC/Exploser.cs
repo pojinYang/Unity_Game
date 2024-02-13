@@ -38,7 +38,7 @@ public class Exploser : MonoBehaviour
                 fs.SetupButton("......",()=>{
                     //fs.Resume();
                     fs.RemoveButtonGroup();
-                    fs.ReadTextFromResource("other");
+                    fs.ReadTextFromResource("other 13");
                 });
 
                 // 火焰花->祭祀之火
@@ -46,7 +46,7 @@ public class Exploser : MonoBehaviour
                     fs.SetupButton("火焰花",()=>{
                     //fs.Resume();
                     fs.RemoveButtonGroup();
-                    fs.ReadTextFromResource("other0");
+                    fs.ReadTextFromResource("other 14");
                     backpack.GetComponent<BackPackItem>().fire_flower = false;
                     backpack.GetComponent<BackPackItem>().fire = true;
                     });
@@ -57,7 +57,7 @@ public class Exploser : MonoBehaviour
                     fs.SetupButton("植物精華",()=>{
                     //fs.Resume();
                     fs.RemoveButtonGroup();
-                    fs.ReadTextFromResource("other0");
+                    fs.ReadTextFromResource("other 15");
                     backpack.GetComponent<BackPackItem>().plant_ginhua = false;
                     backpack.GetComponent<BackPackItem>().fire_ginhua = true;
                     
@@ -69,7 +69,7 @@ public class Exploser : MonoBehaviour
                     fs.SetupButton("什覓草",()=>{
                     //fs.Resume();
                     fs.RemoveButtonGroup();
-                    fs.ReadTextFromResource("other0");
+                    fs.ReadTextFromResource("other 16");
                     backpack.GetComponent<BackPackItem>().herb = false;
                     backpack.GetComponent<BackPackItem>().ash = true;
                     
@@ -81,7 +81,7 @@ public class Exploser : MonoBehaviour
                     fs.SetupButton("聖騎士之劍",()=>{
                     //fs.Resume();
                     fs.RemoveButtonGroup();
-                    fs.ReadTextFromResource("other0");
+                    fs.ReadTextFromResource("other 17");
                     backpack.GetComponent<BackPackItem>().sword = false;
                     backpack.GetComponent<BackPackItem>().rocket = true;
                     
