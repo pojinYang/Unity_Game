@@ -13,7 +13,6 @@ public class Exploser : MonoBehaviour
     GameObject hint;
     GameObject backpack;
     Vector3 Pos = new Vector3(0, 0, 0);
-    bool isLock = false;
     bool isEnd=false;
     void Start()
     {   
@@ -30,9 +29,19 @@ public class Exploser : MonoBehaviour
         
         if(isNear){
             
-            if(fs.isCompleted&&isEnd==false&&setup&&!isLock){
+            if(fs.isCompleted&&isEnd==false&&setup){
                 Debug.Log("isCompleted"); 
+                
                 fs.SetupButtonGroup();
+                
+                // 什麼都不燒 
+                fs.SetupButton("......",()=>{
+                    //fs.Resume();
+                    fs.RemoveButtonGroup();
+                    fs.ReadTextFromResource("other");
+                });
+
+                // 火焰花->祭祀之火
                 if(backpack.GetComponent<BackPackItem>().fire_flower){
                     fs.SetupButton("火焰花",()=>{
                     //fs.Resume();
@@ -40,10 +49,48 @@ public class Exploser : MonoBehaviour
                     fs.ReadTextFromResource("other0");
                     backpack.GetComponent<BackPackItem>().fire_flower = false;
                     backpack.GetComponent<BackPackItem>().fire = true;
-                    isLock = false;
+                    
                     });
                 }
-                isLock = true;
+                
+                // 植物精華->火焰精華
+                if(backpack.GetComponent<BackPackItem>().plant_ginhua){
+                    fs.SetupButton("植物精華",()=>{
+                    //fs.Resume();
+                    fs.RemoveButtonGroup();
+                    fs.ReadTextFromResource("other0");
+                    backpack.GetComponent<BackPackItem>().plant_ginhua = false;
+                    backpack.GetComponent<BackPackItem>().fire_ginhua = true;
+                    
+                    });
+                }
+
+                // 什覓草->灰燼
+                if(backpack.GetComponent<BackPackItem>().herb){
+                    fs.SetupButton("什覓草",()=>{
+                    //fs.Resume();
+                    fs.RemoveButtonGroup();
+                    fs.ReadTextFromResource("other0");
+                    backpack.GetComponent<BackPackItem>().herb = false;
+                    backpack.GetComponent<BackPackItem>().ash = true;
+                    
+                    });
+                }
+
+                // 聖劍->火箭
+                if(backpack.GetComponent<BackPackItem>().sword){
+                    fs.SetupButton("聖騎士之劍",()=>{
+                    //fs.Resume();
+                    fs.RemoveButtonGroup();
+                    fs.ReadTextFromResource("other0");
+                    backpack.GetComponent<BackPackItem>().sword = false;
+                    backpack.GetComponent<BackPackItem>().rocket = true;
+                    
+                    });
+                }
+
+
+
                 isEnd = true;
             }
 
@@ -80,7 +127,7 @@ public class Exploser : MonoBehaviour
             }
                 
         }
-            
+        
 
             
     }
@@ -91,6 +138,7 @@ public class Exploser : MonoBehaviour
         Pos.y -=0.9f;
         hint.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         isNear = true;
+        isEnd = false;
     }
 
     void OnTriggerExit2D(Collider2D other) {
