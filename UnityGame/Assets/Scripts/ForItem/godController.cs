@@ -94,7 +94,7 @@ public class godController : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
                     setup = true;
-                    fs.ReadTextFromResource("stage 15");
+                    fs.ReadTextFromResource("stage 24");
                 }
             }
         }

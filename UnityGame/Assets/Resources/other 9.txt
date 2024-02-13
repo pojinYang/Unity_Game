@@ -1,0 +1,4 @@
+[c]
+好吧。路上小心。[w]
+[release_player]
+[hide]

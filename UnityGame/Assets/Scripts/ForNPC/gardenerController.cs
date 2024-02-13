@@ -48,7 +48,7 @@ public class gardenerController : MonoBehaviour
                             fs.ReadTextFromResource("stage 13");
                         }
                     }
-                    else fs.ReadTextFromResource("other");
+                    else fs.ReadTextFromResource("other 18");
                     
                     setup = true;
                 }else{

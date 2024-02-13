@@ -9,6 +9,7 @@ public class pharmacistController : MonoBehaviour
     FlowerSystem fs;
     // Start is called before the first frame update
     bool setup = false;
+    bool isEnd = false;
     GameObject hint;
     GameObject backpack;
     Vector3 Pos = new Vector3(0, 0, 0);
@@ -27,7 +28,38 @@ public class pharmacistController : MonoBehaviour
         
         if(isNear){
             
+            if(fs.isCompleted&&isEnd==false&&setup){
+                fs.SetupButtonGroup();
 
+                // 啥都不做
+                fs.SetupButton("......",()=>{
+                    //fs.Resume();
+                    fs.RemoveButtonGroup();
+                    fs.ReadTextFromResource("other 9");
+                });
+
+                // 獲取植物精華
+                if(backpack.GetComponent<BackPackItem>().stage2==2 && backpack.GetComponent<BackPackItem>().plant_ginhua==false){
+                    fs.SetupButton("關於火焰花...",()=>{
+                    //fs.Resume();
+                    fs.RemoveButtonGroup();
+                    fs.ReadTextFromResource("other 10");
+                    backpack.GetComponent<BackPackItem>().plant_ginhua = true;
+                        backpack.GetComponent<BackPackItem>().stage2=3;
+                    });
+                }
+
+                // 獲取線索
+                if(backpack.GetComponent<BackPackItem>().stage==7 && backpack.GetComponent<BackPackItem>().plant_ginhua==false){
+                    fs.SetupButton("關於什覓草...",()=>{
+                    //fs.Resume();
+                    fs.RemoveButtonGroup();
+                    fs.ReadTextFromResource("other 11");
+                    });
+                }
+
+                isEnd = true;
+            }
             
 
             
@@ -35,13 +67,8 @@ public class pharmacistController : MonoBehaviour
             
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
-                    if(backpack.GetComponent<BackPackItem>().stage2==2 && backpack.GetComponent<BackPackItem>().plant_ginhua==false){
-                        fs.ReadTextFromResource("stage 16");
-                        backpack.GetComponent<BackPackItem>().plant_ginhua = true;
-                        backpack.GetComponent<BackPackItem>().stage2=3;
-                    }else{
-                        fs.ReadTextFromResource("other");
-                    }
+                    fs.ReadTextFromResource("stage 16");
+                    
                     
                     
                     setup = true;
@@ -67,6 +94,7 @@ public class pharmacistController : MonoBehaviour
         Pos.y -=0.9f;
         hint.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         isNear = true;
+        isEnd = false;
     } 
 
     void OnTriggerExit2D(Collider2D other) {
