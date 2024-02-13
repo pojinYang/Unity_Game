@@ -35,17 +35,11 @@ public class WitchController : MonoBehaviour
             
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
-                    if(backpack.GetComponent<BackPackItem>().stage==5)
-                        fs.ReadTextFromResource("stage 6");
-                    else if(backpack.GetComponent<BackPackItem>().stage<5){
-                        fs.ReadTextFromResource("other");
-                    }else if(backpack.GetComponent<BackPackItem>().stage==7){
-                        fs.ReadTextFromResource("stage 7");
-                    }else fs.ReadTextFromResource("other");
+                    
                     setup = true;
 
                     if(backpack.GetComponent<BackPackItem>().stage<5){
-                        fs.ReadTextFromResource("other");
+                        fs.ReadTextFromResource("other 9");
                     }
                     if(backpack.GetComponent<BackPackItem>().stage==5){
                         fs.ReadTextFromResource("stage 6");
