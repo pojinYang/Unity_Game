@@ -1,0 +1,5 @@
+[lock_player]
+[show]
+<黑衣男孩>：誰家的羊駝亂跑(╬▔皿▔)╯[w]
+[release_player]
+[hide]
