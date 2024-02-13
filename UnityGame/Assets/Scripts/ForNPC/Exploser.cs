@@ -49,7 +49,6 @@ public class Exploser : MonoBehaviour
                     fs.ReadTextFromResource("other0");
                     backpack.GetComponent<BackPackItem>().fire_flower = false;
                     backpack.GetComponent<BackPackItem>().fire = true;
-                    
                     });
                 }
                 
