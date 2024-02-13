@@ -1,0 +1,7 @@
+
+[lock_player]
+[show]
+打開了![w]
+獲得{祕寶}！[w]
+[release_player]
+[hide]

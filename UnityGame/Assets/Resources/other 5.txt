@@ -1,0 +1,6 @@
+
+[lock_player]
+[show]
+<???>：斷橋，閒人勿近！[w]
+[release_player]
+[hide]

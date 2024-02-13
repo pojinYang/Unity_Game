@@ -1,0 +1,6 @@
+
+[lock_player]
+[show]
+<你>：沒有鑰匙，打不開......[w]
+[release_player]
+[hide]
