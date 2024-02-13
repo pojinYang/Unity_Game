@@ -9,7 +9,6 @@ public class WitchController : MonoBehaviour
     FlowerSystem fs;
     // Start is called before the first frame update
     bool setup = false;
-    bool k = false;
     GameObject hint;
     GameObject backpack;
     Vector3 Pos = new Vector3(0, 0, 0);
