@@ -110743,10 +110743,12 @@ MonoBehaviour:
   ash: 0
   fire_ginhua: 0
   rocket: 0
+  magnifier: 0
   clue_herb: 0
   clue_stone_plate: 0
   clue_fire: 0
   clue_grave: 0
+  clue_steal: 0
   clue: 0
   stage: 0
   stage2: 0
@@ -111602,7 +111604,7 @@ PrefabInstance:
     - target: {fileID: 2577585254963922480, guid: fb2df5b680b64b449a78162ebcd98e97,
         type: 3}
       propertyPath: m_Name
-      value: wood_box (2)
+      value: magnifier_box
       objectReference: {fileID: 0}
     - target: {fileID: 2577585254963922481, guid: fb2df5b680b64b449a78162ebcd98e97,
         type: 3}

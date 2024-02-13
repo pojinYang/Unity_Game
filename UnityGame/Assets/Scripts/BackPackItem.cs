@@ -18,12 +18,14 @@ public class BackPackItem : MonoBehaviour
     public bool ash = false;
     public bool fire_ginhua = false;  //火焰精華
     public bool rocket = false; //火箭
+    public bool magnifier = false; //放大鏡
 
     // 線索紀錄
     public int clue_herb = 0;
     public int clue_stone_plate = 0;
     public int clue_fire = 0;
     public int clue_grave = 0;
+    public int clue_steal = 0;
     public int clue = 0;
 
     public int stage;

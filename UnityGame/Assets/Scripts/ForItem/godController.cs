@@ -85,6 +85,28 @@ public class godController : MonoBehaviour
                     });
                 }
 
+                // 放大鏡->線索
+                if(backpack.GetComponent<BackPackItem>().magnifier){
+                    fs.SetupButton("放大鏡",()=>{
+                    //fs.Resume();
+                    fs.RemoveButtonGroup();
+                    fs.ReadTextFromResource("other 33");
+                    backpack.GetComponent<BackPackItem>().clue_steal = 1;
+                    
+                    });
+                }
+
+                // 祕寶->通關
+                if(backpack.GetComponent<BackPackItem>().magnifier){
+                    fs.SetupButton("祕寶",()=>{
+                    //fs.Resume();
+                    fs.RemoveButtonGroup();
+                    fs.ReadTextFromResource("stage 23");
+                    //  通關
+                    
+                    });
+                }
+
                 isEnd = true;
             }
 

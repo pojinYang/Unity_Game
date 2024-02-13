@@ -11,6 +11,7 @@ public class CorrectWoodBoxController : MonoBehaviour
     GameObject backpack;
     Vector3 Pos = new Vector3(0, 0, 0);
     bool setup = false;
+    bool isFirst = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,8 +27,9 @@ public class CorrectWoodBoxController : MonoBehaviour
         if(isNear){
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
-                    if(backpack.GetComponentInParent<BackPackItem>().invisible_lens == false){
+                    if(backpack.GetComponentInParent<BackPackItem>().invisible_lens == false && isFirst){
                         setup = true;
+                        isFirst = false;
                         fs.ReadTextFromResource("correctbox");
                         backpack.GetComponentInParent<BackPackItem>().invisible_lens = true;
                     }else{

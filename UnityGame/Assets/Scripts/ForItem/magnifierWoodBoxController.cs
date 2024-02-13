@@ -3,62 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using Flower;
 
-public class knightController : MonoBehaviour
+public class magnifierWoodBoxController : MonoBehaviour
 {
     public bool isNear = false;
     FlowerSystem fs;
-    // Start is called before the first frame update
-    bool setup = false;
     GameObject hint;
     GameObject backpack;
     Vector3 Pos = new Vector3(0, 0, 0);
+    bool setup = false;
+    bool isFirst = true;
+    // Start is called before the first frame update
     void Start()
-    {   
+    {
         backpack = GameObject.Find("Backpack");
         Pos = transform.localPosition;
         hint = GameObject.Find("hint");
         fs= FlowerManager.Instance.GetFlowerSystem("default");
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
         if(isNear){
-            
-
-            
-
-            
-            
-            
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
-                    if(backpack.GetComponent<BackPackItem>().sword == true) fs.ReadTextFromResource("stage 21"); // +BOSS戰
-                    else if(backpack.GetComponent<BackPackItem>().clue_steal != 1 || backpack.GetComponent<BackPackItem>().clue < 3) fs.ReadTextFromResource("other 20");
-                    else if(backpack.GetComponent<BackPackItem>().clue_steal == 1 && backpack.GetComponent<BackPackItem>().clue == 3){
-                        fs.ReadTextFromResource("stage 20");
-                        backpack.GetComponent<BackPackItem>().sword_key = true;
+                    if(backpack.GetComponentInParent<BackPackItem>().magnifier == false && isFirst){
+                        setup = true;
+                        isFirst = false;
+                        fs.ReadTextFromResource("magnifierbox");
+                        backpack.GetComponentInParent<BackPackItem>().magnifier = true;
+                    }else{
+                        setup = true;
+                        fs.ReadTextFromResource("wrongbox");
                     }
-
-
-                    setup = true;
-                }else{
-
-                    fs.Next();
-
+                    
                 }
-                                    
-                                
-
             }
-                
         }
-            
-
-            
     }
+
     void OnTriggerEnter2D(Collider2D other) {
         //Debug.Log("next2stair物體進入觸發器");
         Pos.y +=0.9f;
@@ -66,15 +49,13 @@ public class knightController : MonoBehaviour
         Pos.y -=0.9f;
         hint.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         isNear = true;
+
     }
 
     void OnTriggerExit2D(Collider2D other) {
         //Debug.Log("next2stair物體離開觸發器");
-        
-
-        isNear = false;
         setup = false;
-        
+        isNear = false;
         hint.transform.localScale = new Vector3(0, 0, 0);
     }
 }
