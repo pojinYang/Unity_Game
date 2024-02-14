@@ -32,7 +32,7 @@ public class StartMenu : MonoBehaviour
         else isReadMe = true;
         if(isReadMe){
             readme0.transform.localScale = new Vector3(11,9,0);
-            text0.transform.localScale = new Vector3(0.1f,0.1f,0.1f);
+            text0.transform.localScale = new Vector3(1,1,1);
         }
         else{
             readme0.transform.localScale = new Vector3(0,0,0);
