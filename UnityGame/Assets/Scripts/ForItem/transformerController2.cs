@@ -27,7 +27,7 @@ public class transformerController2 : MonoBehaviour
     {
         if(isNear){
             if(Input.GetKeyDown(KeyCode.Space)){
-                if(!setup){
+                if(!setup&&fs.isCompleted){
                     setup = true;
                     fs.ReadTextFromResource("other 21");
                     player.transform.position = new Vector3(-22.0f, -3.1f, 0);
