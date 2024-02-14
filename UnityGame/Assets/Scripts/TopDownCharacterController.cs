@@ -12,6 +12,7 @@ namespace Cainos.PixelArtTopDown_Basic
         public bool canPlayerMove = true ;
 
         private Animator animator;
+        public Vector2 dir = Vector2.zero;
 
         private void Start()
         {
@@ -22,6 +23,7 @@ namespace Cainos.PixelArtTopDown_Basic
         private void Update()
         {
             Vector2 dir = Vector2.zero;
+            
             if(!canPlayerMove)
             {
                 dir.x = 0;

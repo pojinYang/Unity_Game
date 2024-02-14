@@ -26140,6 +26140,7 @@ GameObject:
   - component: {fileID: 744239301}
   - component: {fileID: 744239300}
   - component: {fileID: 744239298}
+  - component: {fileID: 744239303}
   m_Layer: 0
   m_Name: smarter
   m_TagString: Untagged
@@ -26269,6 +26270,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &744239303
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744239296}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 434f6d735a14bda4a941bf660997eb20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &755895609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30194,6 +30215,7 @@ GameObject:
   - component: {fileID: 1080697065}
   - component: {fileID: 1080697064}
   - component: {fileID: 1080697067}
+  - component: {fileID: 1080697068}
   m_Layer: 0
   m_Name: cleaner
   m_TagString: Untagged
@@ -30323,6 +30345,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNear: 0
+--- !u!95 &1080697068
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080697061}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 56a160f4896d7e2439fbd9314117f8c3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!1 &1081763329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1081763331}
+  - component: {fileID: 1081763332}
+  m_Layer: 0
+  m_Name: Boss_Game
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1081763331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081763329}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.148348, y: -27.597479, z: 0.66614527}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1081763332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081763329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f26738a7c0a6f4db1fa32e25fb3e4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sword: {fileID: 854133863510134948, guid: e4f7c1157d3a93e4994f6dff555013a4, type: 3}
 --- !u!1 &1083929233
 GameObject:
   m_ObjectHideFlags: 0
@@ -110922,6 +111009,7 @@ GameObject:
   - component: {fileID: 1377292102}
   - component: {fileID: 1377292101}
   - component: {fileID: 1377292104}
+  - component: {fileID: 1377292105}
   m_Layer: 0
   m_Name: whiteguy
   m_TagString: Untagged
@@ -111051,6 +111139,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNear: 0
+--- !u!95 &1377292105
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377292098}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 969e2662ca7d3ca4f904b4d28207d6fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1393757691
 GameObject:
   m_ObjectHideFlags: 0
@@ -111064,6 +111172,7 @@ GameObject:
   - component: {fileID: 1393757695}
   - component: {fileID: 1393757694}
   - component: {fileID: 1393757697}
+  - component: {fileID: 1393757698}
   m_Layer: 0
   m_Name: blackguy
   m_TagString: Untagged
@@ -111193,6 +111302,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNear: 0
+--- !u!95 &1393757698
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393757691}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f26d0f3d080c18d46932e48392898a88, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1448249882 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2577585254963922480, guid: fb2df5b680b64b449a78162ebcd98e97,

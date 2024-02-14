@@ -68,5 +68,26 @@ public class BackPackItem : MonoBehaviour
             player.transform.GetChild(2).gameObject.GetComponent<BoxCollider2D>().enabled = false;
             Ghost_Game1=0;
         }
+        /*if(stage==6&&Ghost_Game1==0){
+            player.transform.position = new Vector3(-191.7f, -10.7f, 0);
+            Ghost_Game1=1;
+            fist.GetComponent<fistGenerator>().isHit=false;
+            fist.GetComponent<fistGenerator>().times=0;
+            player.transform.GetChild(2).gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        }
+        else if(Ghost_Game1==1&&stage==6){
+            fist.GetComponent<fistGenerator>().Playing();
+        }
+        else if(Ghost_Game1==2){
+            if(fist.GetComponent<fistGenerator>().isHit)
+                stage=5;
+            else
+                stage=7;
+            player.transform.position = new Vector3(-22.9f, -5.8f, 0);
+            player.transform.GetChild(2).gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            Ghost_Game1=0;
+        }*/
+
+
     }
 }
