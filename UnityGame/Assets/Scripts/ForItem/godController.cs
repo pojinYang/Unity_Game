@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Flower;
-
+using UnityEngine.SceneManagement;
 public class godController : MonoBehaviour
 {
     public bool isNear = false;
@@ -13,6 +13,7 @@ public class godController : MonoBehaviour
     bool setup = false;
     bool isEnd=false;
     // Start is called before the first frame update
+    public bool GameOver = false;
     void Start()
     {
         backpack = GameObject.Find("Backpack");
@@ -103,11 +104,12 @@ public class godController : MonoBehaviour
                     fs.RemoveButtonGroup();
                     fs.ReadTextFromResource("stage 23");
                     //  通關
-                    
+                    GameOver = true;
                     });
                 }
 
                 isEnd = true;
+                
             }
 
 
@@ -117,8 +119,14 @@ public class godController : MonoBehaviour
                 if(!setup){
                     setup = true;
                     fs.ReadTextFromResource("stage 24");
+                    
                 }
             }
+        }
+        if(fs.isCompleted&&GameOver){
+            fs.RemoveDialog();
+            Destroy(fs);
+            SceneManager.LoadScene(0);
         }
     }
 

@@ -80,8 +80,8 @@ public class FistController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //GameObject.Find("Ghost_Game").GetComponent<fistGenerator>().isHit=true;
-        //GameObject.Find("Backpack").GetComponent<BackPackItem>().Ghost_Game1=2;
+        GameObject.Find("Ghost_Game").GetComponent<fistGenerator>().isHit=true;
+        GameObject.Find("Backpack").GetComponent<BackPackItem>().Ghost_Game1=2;
 
         Destroy(gameObject);
         Debug.Log("OnTriggerEnter");

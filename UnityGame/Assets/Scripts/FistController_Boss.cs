@@ -26,7 +26,7 @@ public class FistController_Boss : MonoBehaviour
             if(dir==3){
                 transform.position = new Vector3(-206, y, 0);
             }else{
-                transform.position = new Vector3(-176, y, 0);
+                transform.position = new Vector3(-187, y, 0);
             
             }
         }
@@ -80,9 +80,9 @@ public class FistController_Boss : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        GameObject.Find("Boss_Game").GetComponent<fistGenerator_Boss>().isHit=true;
-        GameObject.Find("Backpack").GetComponent<BackPackItem>().Ghost_Game1=2;
-
+        
+        
+        
         Destroy(gameObject);
         Debug.Log("OnTriggerEnter");
     }

@@ -78,16 +78,25 @@ public class BackPackItem : MonoBehaviour
             fist.GetComponent<fistGenerator>().Playing();
             }
             else if(Ghost_Game1==2){
-                if(fist.GetComponent<fistGenerator>().isHit)
+                if(fist.GetComponent<fistGenerator>().isHit){
                     stage=4;
+                    player.transform.position = new Vector3(-22.9f, -5.8f, 0);
+                    player.transform.GetChild(2).gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                    Ghost_Game1=0;
+                }
+                    
                 else{
                     stage=7;
                     isGhostGameFinished = true;
+                    player.transform.position = new Vector3(-22.9f, -5.8f, 0);
+                    player.transform.GetChild(2).gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                    Ghost_Game1=0;
+                    fs.ReadTextFromResource("stage 7");
+                    stage = 8;
                 }
                     
-                player.transform.position = new Vector3(-22.9f, -5.8f, 0);
-                player.transform.GetChild(2).gameObject.GetComponent<BoxCollider2D>().enabled = false;
-                Ghost_Game1=0;
+                
+                
                 
             }
 
@@ -104,6 +113,8 @@ public class BackPackItem : MonoBehaviour
                 witch_hit.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
                 knight_hit.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
                 GameObject.Find("knight").transform.localScale = new Vector3(0,0,0);
+                GameObject.Find("knight").transform.position = new Vector3(500, 500, 0);
+                GameObject.Find("hint").transform.localScale = new Vector3(0, 0, 0);
                 
             }
             else if(Ghost_Game1==1&&fs.isCompleted&&stage3==3){
@@ -112,7 +123,7 @@ public class BackPackItem : MonoBehaviour
             else if(Ghost_Game1==2){
                 
                     
-                
+                    
                     stage3=4;
                     fs.ReadTextFromResource("stage 22");
                     Ghost_Game1=0;
@@ -122,7 +133,7 @@ public class BackPackItem : MonoBehaviour
                     
             }
             if(fs.isCompleted&&stage3==4){
-                player.transform.position = GameObject.Find("knight").transform.position;
+                player.transform.position = new Vector3(-4.47f,-30.4f,0);
                 player.transform.GetChild(2).gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 fs.ReadTextFromResource("stage 23");
                 treasure_key = true;

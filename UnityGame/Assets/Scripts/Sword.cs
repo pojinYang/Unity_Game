@@ -12,6 +12,7 @@ public class Sword : MonoBehaviour
     {
         pos = GameObject.Find("Player").transform.localPosition;
         dir = GameObject.Find("Player").GetComponent<Animator>().GetInteger("Direction");
+        pos.x+=1f;    
         transform.position = pos;
     }
 
@@ -48,5 +49,21 @@ public class Sword : MonoBehaviour
 
 
 
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+        Debug.Log("OnCollisionEnter");
+
+    }
+
+    
+
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        
+        Destroy(gameObject);
+        Debug.Log("OnTriggerEnter");
     }
 }

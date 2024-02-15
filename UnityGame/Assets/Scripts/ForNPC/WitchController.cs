@@ -37,7 +37,7 @@ public class WitchController : MonoBehaviour
             
             
             if(Input.GetKeyDown(KeyCode.Space)){
-                if(!setup){
+                if(!setup&&fs.isCompleted){
                     
                     setup = true;
 
@@ -50,10 +50,10 @@ public class WitchController : MonoBehaviour
                     else if(backpack.GetComponent<BackPackItem>().stage==6){
                         //fs.ReadTextFromResource("other");
                     }
-                    else if(backpack.GetComponent<BackPackItem>().stage==7){
+                    /*else if(backpack.GetComponent<BackPackItem>().stage==7){
                         fs.ReadTextFromResource("stage 7");
                         backpack.GetComponent<BackPackItem>().stage = 8;
-                    }
+                    }*/
                     else if(backpack.GetComponent<BackPackItem>().stage==8){ //還沒做要不要給巫師的選項內容
                         if(backpack.GetComponent<BackPackItem>().herb==true){
                             fs.ReadTextFromResource("stage 9");
