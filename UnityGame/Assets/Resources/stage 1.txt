@@ -11,4 +11,3 @@
 <衛兵>：不然你先去魏曲銘那邊求助看看好了。[w]
 [release_player]
 [hide]
-[next_stage, 2]

@@ -39,18 +39,17 @@ public class pharmacistController : MonoBehaviour
                 });
 
                 // 獲取植物精華
-                if(backpack.GetComponent<BackPackItem>().stage2==2 && backpack.GetComponent<BackPackItem>().plant_ginhua==false){
+                if(backpack.GetComponent<BackPackItem>().stage2==1 && backpack.GetComponent<BackPackItem>().plant_ginhua==false){
                     fs.SetupButton("關於火焰花...",()=>{
                     //fs.Resume();
                     fs.RemoveButtonGroup();
                     fs.ReadTextFromResource("other 10");
                     backpack.GetComponent<BackPackItem>().plant_ginhua = true;
-                        backpack.GetComponent<BackPackItem>().stage2=3;
                     });
                 }
 
                 // 獲取線索
-                if(backpack.GetComponent<BackPackItem>().stage==7 && backpack.GetComponent<BackPackItem>().plant_ginhua==false){
+                if(backpack.GetComponent<BackPackItem>().stage==8 && backpack.GetComponent<BackPackItem>().plant_ginhua==false){
                     fs.SetupButton("關於什覓草...",()=>{
                     //fs.Resume();
                     fs.RemoveButtonGroup();

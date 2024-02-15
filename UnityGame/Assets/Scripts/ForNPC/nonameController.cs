@@ -36,19 +36,22 @@ public class nonameController : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
                     
-                    if(backpack.GetComponent<BackPackItem>().stage==1)
+                    if(backpack.GetComponent<BackPackItem>().stage==0)
                         fs.ReadTextFromResource("other 19");
-                    if(backpack.GetComponent<BackPackItem>().stage==2)
+                    else if(backpack.GetComponent<BackPackItem>().stage==1){
                         fs.ReadTextFromResource("stage 2");
-                    if(backpack.GetComponent<BackPackItem>().stage==3){
+                        backpack.GetComponent<BackPackItem>().stage = 2;
+                    }
+                    else if(backpack.GetComponent<BackPackItem>().stage==2){
                         if(backpack.GetComponent<BackPackItem>().invisible_lens == true){
                             fs.ReadTextFromResource("stage 3");
+                            backpack.GetComponent<BackPackItem>().stage = 3;
                             backpack.GetComponent<BackPackItem>().invisible_lens = false;
                         }else{
                             fs.ReadTextFromResource("other 2");
                         }
                     }
-                    if(backpack.GetComponent<BackPackItem>().stage>3)
+                    else if(backpack.GetComponent<BackPackItem>().stage>3)
                         fs.ReadTextFromResource("other 3");
                     
                     setup = true;

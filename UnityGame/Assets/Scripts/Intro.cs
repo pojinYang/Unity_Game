@@ -35,7 +35,7 @@ public class Intro : MonoBehaviour
             backpack.GetComponent<BackPackItem>().stage =int.Parse(_params[0]) ;
         });
         fs.RegisterCommand("play_game",(List<string> _params)=>{   
-            backpack.GetComponent<BackPackItem>().stage = 1;
+            backpack.GetComponent<BackPackItem>().stage = 0;
         });
 
         fs.ReadTextFromResource("stage intro");

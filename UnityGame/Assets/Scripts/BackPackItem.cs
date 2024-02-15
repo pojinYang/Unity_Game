@@ -28,8 +28,9 @@ public class BackPackItem : MonoBehaviour
     public int clue_steal = 0;
     public int clue = 0;
 
-    public int stage;
-    public int stage2;
+    public int stage = 0;
+    public int stage2 = 0;
+    // public int stage3 = 0;
     public int Ghost_Game1=0;
     /* 0:未開始
        1:進行中
@@ -41,8 +42,8 @@ public class BackPackItem : MonoBehaviour
     {
         fist=GameObject.Find("Ghost_Game");
         player=GameObject.Find("Player");
-        stage = 1;
-        stage2 = 1;
+        stage = 0;
+        stage2 = 0;
     }
 
     // Update is called once per frame
@@ -61,7 +62,7 @@ public class BackPackItem : MonoBehaviour
         }
         else if(Ghost_Game1==2){
             if(fist.GetComponent<fistGenerator>().isHit)
-                stage=5;
+                stage=4;
             else
                 stage=7;
             player.transform.position = new Vector3(-22.9f, -5.8f, 0);

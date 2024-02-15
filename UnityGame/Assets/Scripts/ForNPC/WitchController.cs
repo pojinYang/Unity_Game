@@ -41,33 +41,51 @@ public class WitchController : MonoBehaviour
                     
                     setup = true;
 
-                    if(backpack.GetComponent<BackPackItem>().stage<5){
+                    if(backpack.GetComponent<BackPackItem>().stage<4){
                         fs.ReadTextFromResource("other 12");
                     }
-                    if(backpack.GetComponent<BackPackItem>().stage==5){
+                    else if(backpack.GetComponent<BackPackItem>().stage==4){
                         fs.ReadTextFromResource("stage 6");
                     }
-                    if(backpack.GetComponent<BackPackItem>().stage==6){
+                    else if(backpack.GetComponent<BackPackItem>().stage==6){
                         //fs.ReadTextFromResource("other");
                     }
-                    if(backpack.GetComponent<BackPackItem>().stage==7){
+                    else if(backpack.GetComponent<BackPackItem>().stage==7){
                         fs.ReadTextFromResource("stage 7");
+                        backpack.GetComponent<BackPackItem>().stage = 8;
                     }
-                    if(backpack.GetComponent<BackPackItem>().stage==8 && backpack.GetComponent<BackPackItem>().herb==true){ //還沒做要不要給巫師的選項內容
-                        fs.ReadTextFromResource("stage 9");
-                        backpack.GetComponent<BackPackItem>().herb = false;
+                    else if(backpack.GetComponent<BackPackItem>().stage==8){ //還沒做要不要給巫師的選項內容
+                        if(backpack.GetComponent<BackPackItem>().herb==true){
+                            fs.ReadTextFromResource("stage 9");
+                            backpack.GetComponent<BackPackItem>().herb = false;
+                            backpack.GetComponent<BackPackItem>().stage = 9;
+                        }else{
+                            fs.ReadTextFromResource("other 34");
+                        }
+                        
                     }
-                    
-                    if(backpack.GetComponent<BackPackItem>().stage==10 && backpack.GetComponent<BackPackItem>().fire==true){  //還沒做要不要給巫師的選項內容
-                        fs.ReadTextFromResource("stage 17");
-                        backpack.GetComponent<BackPackItem>().fire=false;
-                        GameOver = true;
+                    else if(backpack.GetComponent<BackPackItem>().stage==9){ //還沒做要不要給巫師的選項內容
+                        if(backpack.GetComponent<BackPackItem>().stone_plate==true){
+                            fs.ReadTextFromResource("stage 12");
+                            backpack.GetComponent<BackPackItem>().stone_plate=false;
+                            backpack.GetComponent<BackPackItem>().stage = 10;
+                        }else{
+                            fs.ReadTextFromResource("other 35");
+                        }
+                        
                     }
-                    if(backpack.GetComponent<BackPackItem>().stage==9 && backpack.GetComponent<BackPackItem>().stone_plate==true){  //還沒做要不要給巫師的選項內容
-                        fs.ReadTextFromResource("stage 12");
-                        backpack.GetComponent<BackPackItem>().stone_plate=false;
-                        backpack.GetComponent<BackPackItem>().stage = 10;
+                    else if(backpack.GetComponent<BackPackItem>().stage==10){ //還沒做要不要給巫師的選項內容
+                        if(backpack.GetComponent<BackPackItem>().fire==true){
+                            fs.ReadTextFromResource("stage 17");
+                            backpack.GetComponent<BackPackItem>().fire=false;
+                            backpack.GetComponent<BackPackItem>().stage = 11;
+                            GameOver = true;
+                        }else{
+                            fs.ReadTextFromResource("other 36");
+                        }
+                        
                     }
+
 
 
                 }else{

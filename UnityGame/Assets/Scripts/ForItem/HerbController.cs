@@ -11,6 +11,7 @@ public class HerbController : MonoBehaviour
     GameObject backpack;
     Vector3 Pos = new Vector3(0, 0, 0);
     bool setup = false;
+    bool haveherb = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,15 +28,22 @@ public class HerbController : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
                     setup = true;
-                    if(backpack.GetComponent<BackPackItem>().stage==7 && backpack.GetComponentInParent<BackPackItem>().herb == false){
-                        fs.ReadTextFromResource("stage 8");
-                        backpack.GetComponentInParent<BackPackItem>().herb = true;
-                        backpack.GetComponent<BackPackItem>().stage = 8;
-                        
-                    }else if(backpack.GetComponent<BackPackItem>().stage==8){
-                        fs.ReadTextFromResource("herb_talk_3");
-                    }else{
+
+                    if(backpack.GetComponent<BackPackItem>().stage<8){
                         fs.ReadTextFromResource("herb_talk_2");
+                    }
+                    if(backpack.GetComponent<BackPackItem>().stage==8){
+                        if(haveherb){
+                            fs.ReadTextFromResource("stage 8");
+                            backpack.GetComponentInParent<BackPackItem>().herb = true;
+                            haveherb = false;
+                        }else{
+                            fs.ReadTextFromResource("herb_talk_3");
+                        }
+                        
+                    }
+                    if(backpack.GetComponent<BackPackItem>().stage>8){
+                        fs.ReadTextFromResource("herb_talk_3");
                     }
                     
                 }
