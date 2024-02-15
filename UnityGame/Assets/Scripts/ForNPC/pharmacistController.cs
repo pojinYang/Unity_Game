@@ -49,7 +49,7 @@ public class pharmacistController : MonoBehaviour
                 }
 
                 // 獲取線索
-                if(backpack.GetComponent<BackPackItem>().stage==8 && backpack.GetComponent<BackPackItem>().plant_ginhua==false){
+                if(backpack.GetComponent<BackPackItem>().stage>=8){
                     fs.SetupButton("關於什覓草...",()=>{
                     //fs.Resume();
                     fs.RemoveButtonGroup();

@@ -97,7 +97,7 @@ public class godController : MonoBehaviour
                 }
 
                 // 祕寶->通關
-                if(backpack.GetComponent<BackPackItem>().magnifier){
+                if(backpack.GetComponent<BackPackItem>().treasure){
                     fs.SetupButton("祕寶",()=>{
                     //fs.Resume();
                     fs.RemoveButtonGroup();

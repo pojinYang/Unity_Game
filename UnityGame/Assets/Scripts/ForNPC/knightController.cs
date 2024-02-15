@@ -23,19 +23,27 @@ public class knightController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   if(backpack.GetComponent<BackPackItem>().stage3==2&&fs.isCompleted) {
+            fs.ReadTextFromResource("stage 21_1");
+            backpack.GetComponent<BackPackItem>().stage3=3;
+        }
         
         if(isNear){
             
 
-            
+           
 
             
             
             
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
-                    if(backpack.GetComponent<BackPackItem>().sword == true) fs.ReadTextFromResource("stage 21"); // +BOSS戰
+                    if(backpack.GetComponent<BackPackItem>().sword == true&&backpack.GetComponent<BackPackItem>().stage3==0) 
+                    {fs.ReadTextFromResource("stage 21"); 
+                     //BOSS戰
+                        backpack.GetComponent<BackPackItem>().stage3 = 1;
+                    }
+                    
                     else if(backpack.GetComponent<BackPackItem>().clue_steal != 1 || backpack.GetComponent<BackPackItem>().clue < 3) fs.ReadTextFromResource("other 20");
                     else if(backpack.GetComponent<BackPackItem>().clue_steal == 1 && backpack.GetComponent<BackPackItem>().clue == 3){
                         fs.ReadTextFromResource("stage 20");
@@ -49,6 +57,7 @@ public class knightController : MonoBehaviour
                     fs.Next();
 
                 }
+
                                     
                                 
 

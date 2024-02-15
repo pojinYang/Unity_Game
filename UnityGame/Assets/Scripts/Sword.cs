@@ -7,7 +7,7 @@ public class Sword : MonoBehaviour
     Vector3 pos;
     int dir ;
     // Start is called before the first frame update
-    public float speed = 0.03f;
+    public float speed = 0.05f;
     void Start()
     {
         pos = GameObject.Find("Player").transform.localPosition;
@@ -18,7 +18,7 @@ public class Sword : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(dir==0){
+        /*if(dir==0){
             transform.Translate(0,-0.5f*speed,0);
             if(transform.position.y<-20){
                 Destroy(gameObject);
@@ -38,6 +38,15 @@ public class Sword : MonoBehaviour
             if(transform.position.x<-206){
                 Destroy(gameObject);
             }
-        }
+        }*/
+
+        transform.Translate(speed,0,0);
+        if(transform.position.x>-176){
+                Destroy(gameObject);
+            }
+
+
+
+
     }
 }
