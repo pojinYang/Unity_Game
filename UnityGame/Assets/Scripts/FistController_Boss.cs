@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FistController : MonoBehaviour
+public class FistController_Boss : MonoBehaviour
 {
     // Start is called before the first frame update
     int dir;
@@ -11,7 +11,7 @@ public class FistController : MonoBehaviour
     void Start()
     {
         
-        dir = Random.Range(1, 5);
+        dir = 4;;
         
         if(dir==1||dir==2){
             int x=Random.Range(-190, -183);
@@ -80,8 +80,8 @@ public class FistController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //GameObject.Find("Ghost_Game").GetComponent<fistGenerator>().isHit=true;
-        //GameObject.Find("Backpack").GetComponent<BackPackItem>().Ghost_Game1=2;
+        GameObject.Find("Boss_Game").GetComponent<fistGenerator_Boss>().isHit=true;
+        GameObject.Find("Backpack").GetComponent<BackPackItem>().Ghost_Game1=2;
 
         Destroy(gameObject);
         Debug.Log("OnTriggerEnter");

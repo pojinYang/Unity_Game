@@ -1,5 +1,4 @@
-[lock_player]
-[show]
+[c]
 <你>：透過放大鏡，這裡有指紋......[w]
 <你>：一定是有人偷走了秘寶！[w]
 [release_player]

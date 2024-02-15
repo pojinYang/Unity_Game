@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class fistGenerator : MonoBehaviour
+public class fistGenerator_Boss : MonoBehaviour
 {
     public GameObject fist;
     float span=1.0f; //生成間隔
