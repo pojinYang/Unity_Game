@@ -1,0 +1,6 @@
+[lock_player]
+[show]
+<巫師>：首先是什覓草。[w]
+<巫師>：幫我找到他吧！[w]
+[release_player]
+[hide]

@@ -7,4 +7,3 @@
 獲得了 {浮雕石板}！[w] 
 [release_player]
 [hide]
-[next_stage,9]

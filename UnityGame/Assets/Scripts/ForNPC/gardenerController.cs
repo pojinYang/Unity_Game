@@ -35,20 +35,25 @@ public class gardenerController : MonoBehaviour
             
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
-                    if(backpack.GetComponent<BackPackItem>().stage2==1 || backpack.GetComponent<BackPackItem>().stage2==2){
+                    
+                    if(backpack.GetComponent<BackPackItem>().stage2==0){
                         fs.ReadTextFromResource("stage 13");
-                        backpack.GetComponent<BackPackItem>().stage2 = 2;
+                        backpack.GetComponent<BackPackItem>().stage2 = 1;
                     }
-                    else if(backpack.GetComponent<BackPackItem>().stage2==3){
+                    else if(backpack.GetComponent<BackPackItem>().stage2==1){
                         if(backpack.GetComponent<BackPackItem>().plant_ginhua == true){
                             fs.ReadTextFromResource("stage 14");
                             backpack.GetComponent<BackPackItem>().fire_flower = true;
                             backpack.GetComponent<BackPackItem>().plant_ginhua = false;
+                            backpack.GetComponent<BackPackItem>().stage2 = 2;
                         }else{
                             fs.ReadTextFromResource("stage 13");
                         }
                     }
-                    else fs.ReadTextFromResource("other 18");
+                    else if(backpack.GetComponent<BackPackItem>().stage2==2){
+                        fs.ReadTextFromResource("other 18");
+                    }
+
                     
                     setup = true;
                 }else{

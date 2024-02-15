@@ -9,4 +9,3 @@
 <牧童>：真的不行，就去女神像祈禱祈禱吧。[w]
 [release_player]
 [hide]
-[next_stage,5]

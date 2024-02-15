@@ -1,0 +1,5 @@
+[lock_player]
+[show]
+<巫師>：就剩下祭祀之火了！[w]
+[release_player]
+[hide]

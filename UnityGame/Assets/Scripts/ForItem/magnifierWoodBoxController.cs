@@ -30,7 +30,7 @@ public class magnifierWoodBoxController : MonoBehaviour
                     if(backpack.GetComponentInParent<BackPackItem>().magnifier == false && isFirst){
                         setup = true;
                         isFirst = false;
-                        fs.ReadTextFromResource("magnifierbox");
+                        fs.ReadTextFromResource("magnifiierbox");
                         backpack.GetComponentInParent<BackPackItem>().magnifier = true;
                     }else{
                         setup = true;

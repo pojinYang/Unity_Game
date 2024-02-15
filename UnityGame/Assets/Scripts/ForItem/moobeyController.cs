@@ -27,8 +27,17 @@ public class moobeyController : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
                     setup = true;
-                    fs.ReadTextFromResource("moobey");
-                    backpack.GetComponent<BackPackItem>().clue_grave = 1;
+
+                    if(backpack.GetComponent<BackPackItem>().stage >= 9){
+                        fs.ReadTextFromResource("moobey 1");
+                        backpack.GetComponent<BackPackItem>().clue_grave = 1;
+                    }else{
+                        fs.ReadTextFromResource("moobey 2");
+                    }
+
+
+
+                    
                 }
             }
         }
