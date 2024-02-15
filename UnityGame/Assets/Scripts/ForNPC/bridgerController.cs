@@ -9,22 +9,30 @@ public class bridgerController : MonoBehaviour
     FlowerSystem fs;
     // Start is called before the first frame update
     bool setup = false;
+    bool run = false;
     GameObject hint;
     GameObject backpack;
     Vector3 Pos = new Vector3(0, 0, 0);
     void Start()
     {   
         backpack = GameObject.Find("Backpack");
-        Pos = transform.localPosition;
+        
         hint = GameObject.Find("hint");
         fs= FlowerManager.Instance.GetFlowerSystem("default");
-        
+        transform.localPosition = new Vector3(-50,-14,0);
+        Pos = transform.localPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(run){
+            Pos = transform.localPosition;
+            if(Pos.x<-44) transform.Translate(0.03f, 0, 0);
+            else if (Pos.y>-200) transform.Translate(0, -0.03f, 0);
+        } 
+
+
         if(isNear){
             
 
@@ -36,9 +44,10 @@ public class bridgerController : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
                     if(backpack.GetComponent<BackPackItem>().stage==9){
+                        run = true;
                         fs.ReadTextFromResource("stage 11");
                         backpack.GetComponent<BackPackItem>().stone_plate = true;
-                        // 還沒做逃跑動畫
+                        
                     }
                     else{
                         fs.ReadTextFromResource("stage 10");
