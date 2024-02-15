@@ -8,6 +8,7 @@ namespace Cainos.PixelArtTopDown_Basic
 
     public class TopDownCharacterController : MonoBehaviour
     {
+        public bool isHit = false;
         public float speed;
         public bool canPlayerMove = true ;
 
@@ -55,5 +56,15 @@ namespace Cainos.PixelArtTopDown_Basic
 
             GetComponent<Rigidbody2D>().velocity = speed * dir;
         }
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            
+            isHit = true;
+            Debug.Log("Hit");
+            
+        }
     }
+    
+
+    
 }

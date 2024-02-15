@@ -21,6 +21,9 @@ public class bridgerController : MonoBehaviour
         fs= FlowerManager.Instance.GetFlowerSystem("default");
         transform.localPosition = new Vector3(-50,-14,0);
         Pos = transform.localPosition;
+        fs.RegisterCommand("bridger_escape",(List<string> _params)=>{   
+            run = true;
+        });
     }
 
     // Update is called once per frame
@@ -44,7 +47,7 @@ public class bridgerController : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
                     if(backpack.GetComponent<BackPackItem>().stage==9){
-                        run = true;
+                        //run = true;
                         fs.ReadTextFromResource("stage 11");
                         backpack.GetComponent<BackPackItem>().stone_plate = true;
                         

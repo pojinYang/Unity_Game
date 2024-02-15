@@ -8,7 +8,7 @@ public class knightController : MonoBehaviour
     public bool isNear = false;
     FlowerSystem fs;
     // Start is called before the first frame update
-    bool setup = false;
+    public bool setup = false;
     GameObject hint;
     GameObject backpack;
     Vector3 Pos = new Vector3(0, 0, 0);
@@ -18,7 +18,7 @@ public class knightController : MonoBehaviour
         Pos = transform.localPosition;
         hint = GameObject.Find("hint");
         fs= FlowerManager.Instance.GetFlowerSystem("default");
-        
+        transform.localPosition = new Vector3(-4.47f,-30.4f,0);
     }
 
     // Update is called once per frame
@@ -85,5 +85,12 @@ public class knightController : MonoBehaviour
         setup = false;
         
         hint.transform.localScale = new Vector3(0, 0, 0);
+    }
+    public void escape(){
+        isNear = false;
+        setup = false;
+        
+        hint.transform.localScale = new Vector3(0, 0, 0);
+
     }
 }

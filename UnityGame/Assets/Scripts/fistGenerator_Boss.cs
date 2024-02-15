@@ -17,10 +17,10 @@ public class fistGenerator_Boss : MonoBehaviour
     // Update is called once per frame
     public void Playing()
     {
-        if(times>10){
-            GameObject.Find("Backpack").GetComponent<BackPackItem>().Ghost_Game1=2;
+        
+        
             
-        }
+        
         this.delta += Time.deltaTime;
         if(this.delta>this.span){
             this.delta=0;
@@ -31,5 +31,10 @@ public class fistGenerator_Boss : MonoBehaviour
             times++;
             
         }
+        
     }
+
+
+
+    
 }
