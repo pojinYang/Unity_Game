@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Build.Content;
 using Cainos.PixelArtTopDown_Basic;
 
 public class Plugin_code : MonoBehaviour
