@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Flower;
-using UnityEditor.Build.Content;
+
 using Cainos.PixelArtTopDown_Basic;
 public class Intro : MonoBehaviour
 
