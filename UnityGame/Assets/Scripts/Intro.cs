@@ -32,10 +32,21 @@ public class Intro : MonoBehaviour
             player1.GetComponentInParent<TopDownCharacterController>().canPlayerMove = true;
         });
         fs.RegisterCommand("next_stage",(List<string> _params)=>{   
-            backpack.GetComponent<BackPackItem>().stage =int.Parse(_params[0]) ;
+            backpack.GetComponent<BackPackItem>().stage =int.Parse(_params[0]) ;//some Q
         });
         fs.RegisterCommand("play_game",(List<string> _params)=>{   
             backpack.GetComponent<BackPackItem>().stage = 0;
+        });
+        fs.RegisterCommand("showimage",(List<string> _params)=>{   
+            GameObject target;
+            target = GameObject.Find(_params[0]); // some Q
+            target.transform.localPosition = player1.transform.localPosition;
+            target.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        });
+        fs.RegisterCommand("hideimage",(List<string> _params)=>{   
+            GameObject target;
+            target = GameObject.Find(_params[0]);
+            target.transform.localScale = new Vector3(0, 0, 0);
         });
 
         fs.ReadTextFromResource("stage intro");
