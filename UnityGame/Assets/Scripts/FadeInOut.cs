@@ -7,11 +7,12 @@ public class FadeInOut : MonoBehaviour
 {   
     [HideInInspector]
     public bool isBlack = false;//不透明狀態
+    public bool isWhite = false;
     [HideInInspector]
     public float fadeSpeed = 1;//透明度變化速率
     public RawImage rawImage;
     public RectTransform rectTransform;
-
+    
     void Start()
     {
         rectTransform.sizeDelta = new Vector2(Screen.width, Screen.height);//使背景滿屏
@@ -38,15 +39,45 @@ public class FadeInOut : MonoBehaviour
                 rawImage.color = Color.black;
             }
         }
+        else{
+
+            rawImage.color = Color.Lerp(rawImage.color, Color.white, Time.deltaTime * fadeSpeed);//漸暗
+            if (rawImage.color.a > 0.9f)
+            {
+                rawImage.color = Color.white;
+            }
+        }
     }
 
     //切換狀態
     public void BackGroundControl(bool b)
     {
-        if (b == true)
+        if (b == true){
             isBlack = true;
-        else
+            isWhite = false;
+        }
+            
+        else{
             isBlack = false;
+            isWhite = false;
+        }
+            
+    }
+    public void BackGroundControl_White(bool w){
+        if (w == true){
+            isWhite = true;
+            isBlack = false;
+        }
+            
+        else{
+            isBlack = false;
+            isWhite = false;
+
+
+        } 
+            
+
+
     }
     
 }
