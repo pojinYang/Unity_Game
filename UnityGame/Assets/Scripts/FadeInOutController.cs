@@ -13,6 +13,9 @@ public class FadeInOutController : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             m_Fade.BackGroundControl(false);
+        }else if(Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            m_Fade.BackGroundControl_White(true);
         }
     }
     public void FadeIn()
