@@ -21,7 +21,7 @@ public class FadeInOut : MonoBehaviour
 
     void Update()
     {
-        if (isBlack == false)
+        if (isBlack == false && isWhite == false)
         {
             rawImage.color = Color.Lerp(rawImage.color, Color.clear, Time.deltaTime * fadeSpeed * 0.5f);//漸亮
             //之所以這麼寫主要是因爲Lerp函數的原因，具體詳解可以看這篇文章
