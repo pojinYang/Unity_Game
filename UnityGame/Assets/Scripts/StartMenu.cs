@@ -10,8 +10,10 @@ public class StartMenu : MonoBehaviour
     public bool isReadMe = false;
     public GameObject readme0;
     public GameObject text0;
+    public GameObject camera;
     public void Start()
     {
+        camera.transform.localPosition = new Vector3(0,0,-10);
         readme0 = GameObject.Find("readme_square");
         text0 = GameObject.Find("Text");
     }
@@ -45,5 +47,13 @@ public class StartMenu : MonoBehaviour
     public void Quitgame()
     {
            Application.Quit();
+    }
+
+    public void toAchievement(){
+        
+        if(camera.transform.localPosition.x == 0) camera.transform.localPosition = new Vector3(-50,0,-10);
+        else{
+            camera.transform.localPosition = new Vector3(0,0,-10);
+        }
     }
 }
