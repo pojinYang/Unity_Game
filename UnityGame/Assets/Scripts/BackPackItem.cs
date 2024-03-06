@@ -101,7 +101,7 @@ public class BackPackItem : MonoBehaviour
             }
 
 
-        }else{
+        }/*else{
             //boss 關卡
             if(stage3==1&&Ghost_Game1==0&&fs.isCompleted){
                 player.transform.position = new Vector3(-191.7f, -10.7f, 0);
@@ -139,7 +139,7 @@ public class BackPackItem : MonoBehaviour
                 treasure_key = true;
                 stage3=5;
             }
-        }
+        }*/
 
     }
 

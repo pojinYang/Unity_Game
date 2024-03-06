@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Flower;
+using Cainos.PixelArtTopDown_Basic;
+
 public class StartMenu : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -11,17 +13,43 @@ public class StartMenu : MonoBehaviour
     public GameObject readme0;
     public GameObject text0;
     public GameObject camera;
+    public GameObject backpack;
+    public GameObject player1;
+
+
+    public void Awake(){
+
+        fs = FlowerManager.Instance.CreateFlowerSystem("default", false);
+        backpack = GameObject.Find("Backpack");
+        player1 = GameObject.Find("Player");
+        
+        fs.SetupDialog();
+        fs.ReadTextFromResource("start_menu");
+
+        //initial Flower System
+        
+        
+
+
+    }
+    
     public void Start()
     {
         camera.transform.localPosition = new Vector3(0,0,-10);
         readme0 = GameObject.Find("readme_square");
         text0 = GameObject.Find("Text");
     }
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+            fs.Next();   
+    }
+
 
 
     public void playgame()
     {   
-        fs = FlowerManager.Instance.CreateFlowerSystem("default", false);
+        
 
         SceneManager.LoadScene(1);
         

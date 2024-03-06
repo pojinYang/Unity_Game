@@ -28,13 +28,9 @@ public class Intro : MonoBehaviour
     bool isActive = false;
     void Start()
     {
+        fs= FlowerManager.Instance.GetFlowerSystem("default");
         backpack = GameObject.Find("Backpack");
         player1 = GameObject.Find("Player");
-        fs= FlowerManager.Instance.GetFlowerSystem("default");
-        fs.SetupDialog();
-
-        //initial Flower System
-        
         fs.RegisterCommand("lock_player",(List<string> _params)=>{   
             player1.GetComponentInParent<TopDownCharacterController>().canPlayerMove = false;
         });
@@ -69,8 +65,6 @@ public class Intro : MonoBehaviour
         });
 
         fs.ReadTextFromResource("stage intro");
-        
-        
 
     }
 
