@@ -7,7 +7,7 @@ public class BackPackItem : MonoBehaviour
 {
     FlowerSystem fs;
     // Start is called before the first frame update
-    public bool invisible_lens = false; //隱形眼鏡  //燒不了
+    public bool invisible_lens = false; //隱形眼鏡
     public bool herb = false;  //藥材  
     public bool stone_plate = false;  //石板
     public bool fire_flower = false;  //火焰花
@@ -21,6 +21,8 @@ public class BackPackItem : MonoBehaviour
     public bool fire_ginhua = false;  //火焰精華
     public bool rocket = false; //火箭
     public bool magnifier = false; //放大鏡
+    public bool glass_chip = false; //玻璃渣渣
+    public bool fire_up = false; // 火焰放大器 // 待改名
 
     // 線索紀錄
     public int clue_herb = 0;

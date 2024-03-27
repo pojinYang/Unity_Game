@@ -88,7 +88,38 @@ public class Exploser : MonoBehaviour
                     });
                 }
 
+                // 石板->X
+                if(backpack.GetComponent<BackPackItem>().slate){
+                    fs.SetupButton("石板",()=>{
+                    //fs.Resume();
+                    fs.RemoveButtonGroup();
+                    fs.ReadTextFromResource("other"); // 請提醒我要做這裡
+                    });
+                }
 
+                // 隱形眼鏡->玻璃渣渣
+                if(backpack.GetComponent<BackPackItem>().invisible_lens){
+                    fs.SetupButton("隱形眼鏡",()=>{
+                    //fs.Resume();
+                    fs.RemoveButtonGroup();
+                    fs.ReadTextFromResource("other"); // 請提醒我要做這裡
+                    backpack.GetComponent<BackPackItem>().invisible_lens = false;
+                    backpack.GetComponent<BackPackItem>().glass_chip = true;
+                    
+                    });
+                }
+
+                // 放大鏡->火焰放大器
+                if(backpack.GetComponent<BackPackItem>().magnifier){
+                    fs.SetupButton("放大鏡",()=>{
+                    //fs.Resume();
+                    fs.RemoveButtonGroup();
+                    fs.ReadTextFromResource("other"); // 請提醒我要做這裡
+                    backpack.GetComponent<BackPackItem>().magnifier = false;
+                    backpack.GetComponent<BackPackItem>().fire_up = true;
+                    
+                    });
+                }
 
                 isEnd = true;
             }
