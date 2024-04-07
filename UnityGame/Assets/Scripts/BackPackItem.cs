@@ -38,6 +38,7 @@ public class BackPackItem : MonoBehaviour
     public int Ghost_Game1=0;
 
     public bool isGhostGameFinished = false;
+    public 
     /* 0:未開始
        1:進行中
        2:結束

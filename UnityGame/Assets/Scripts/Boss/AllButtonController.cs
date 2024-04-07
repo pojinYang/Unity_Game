@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class AllButtonController : MonoBehaviour
 {
+    public int HP=10;
+    public int shield = 3;
+    public int[] NumberofLighting = {0,0,0,0,0};
     GameObject button;
     // Start is called before the first frame update
     public int[] ButtonColor = {1,1,2,2,3,3,4,4};
     public void reset(){
-        
+        for(int i=0;i<5;i++){
+            NumberofLighting[i] = 0;
+        }
         gameObject.transform.GetChild(0).GetComponent<Stone_buttom0>().turnColor(0);
         gameObject.transform.GetChild(1).GetComponent<Stone_buttom1>().turnColor(0);
         gameObject.transform.GetChild(2).GetComponent<Stone_buttom2>().turnColor(0);
@@ -31,6 +36,7 @@ public class AllButtonController : MonoBehaviour
     }
     void Start()
     {
+
         button = gameObject.transform.GetChild(0).gameObject;
         reset();
     }
@@ -55,6 +61,25 @@ public class AllButtonController : MonoBehaviour
         if(gameObject.transform.GetChild(7).GetComponent<Stone_buttom7>().islight)
             gameObject.transform.GetChild(7).GetComponent<Stone_buttom7>().turnColor(ButtonColor[7]);
         
+        if(NumberofLighting[1] == 2){ //red
+            reset();
+            HP--;
+        }
+        else if(NumberofLighting[2] == 2){ //blue
+            reset();
+            //colliderOFF
+        }
+        else if(NumberofLighting[3] == 2){//yellow
+            reset();
+            shield--;
+        }
+        else if(NumberofLighting[4] == 2){//purple
+        reset();
+            HP++;
+            shield=3;
+        }
+        
+
         
         
     }
