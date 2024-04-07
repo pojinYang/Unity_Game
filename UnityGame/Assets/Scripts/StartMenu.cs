@@ -31,6 +31,7 @@ public class StartMenu : MonoBehaviour
         fs.RegisterCommand("release_player_start",(List<string> _params)=>{   
             player1.GetComponentInParent<TopDownCharacterController>().canPlayerMove = true;
         });
+        
        
         fs.SetupDialog();
         fs.ReadTextFromResource("start_menu");

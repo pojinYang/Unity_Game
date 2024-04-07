@@ -2,4 +2,9 @@
 [show]
 <退休騎士>：(換上聖騎士之劍)[w]
 <退休騎士>：走吧!正義也許會遲到，但永不缺席![w]
+
 [hide]
+[showimage,manual]
+[w]
+[hideimage,manual]
+[release_player]

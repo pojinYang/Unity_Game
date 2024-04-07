@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Flower;
 public class AllButtonController : MonoBehaviour
 {
     public int HP=10;
     public int shield = 3;
     public int[] NumberofLighting = {0,0,0,0,0};
     GameObject button;
+    FlowerSystem fs;
     // Start is called before the first frame update
     public int[] ButtonColor = {1,1,2,2,3,3,4,4};
+    GameObject player;
     public void reset(){
         for(int i=0;i<5;i++){
             NumberofLighting[i] = 0;
@@ -36,7 +38,8 @@ public class AllButtonController : MonoBehaviour
     }
     void Start()
     {
-
+        player = GameObject.Find("Player");
+        fs = FlowerManager.Instance.GetFlowerSystem("default");
         button = gameObject.transform.GetChild(0).gameObject;
         reset();
     }
@@ -78,7 +81,15 @@ public class AllButtonController : MonoBehaviour
             HP++;
             shield=3;
         }
-        
+        if(HP<=0){
+            HP=100;
+            //gameover
+            GameObject.Find("Witch_Boss").GetComponent<BossController>().playing=false;
+            
+            player.transform.position = new Vector3(-4.47f,-30.4f,0);
+            fs.ReadTextFromResource("stage 22");
+
+        }
 
         
         
