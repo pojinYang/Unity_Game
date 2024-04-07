@@ -38,7 +38,13 @@ public class knightController : MonoBehaviour
             
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(!setup){
-                    if(backpack.GetComponent<BackPackItem>().sword == true&&backpack.GetComponent<BackPackItem>().stage3==0) 
+                    if(backpack.GetComponent<BackPackItem>().stage3 == 1){
+                        fs.ReadTextFromResource("GoGoGO");
+                        backpack.GetComponent<BackPackItem>().stage3 = 100;
+                        GameObject.Find("Player").transform.position = new Vector3(0f,36f,0);
+                    
+                    }
+                    else if(backpack.GetComponent<BackPackItem>().sword == true&&backpack.GetComponent<BackPackItem>().stage3==0) 
                     {fs.ReadTextFromResource("stage 21"); 
                      //BOSS戰
                         backpack.GetComponent<BackPackItem>().sword = false;
