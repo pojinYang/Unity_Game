@@ -41,7 +41,7 @@ public class knightController : MonoBehaviour
                     if(backpack.GetComponent<BackPackItem>().sword == true&&backpack.GetComponent<BackPackItem>().stage3==0) 
                     {fs.ReadTextFromResource("stage 21"); 
                      //BOSS戰
-                        Backpack.GetComponent<BackPackItem>().sword = false;
+                        backpack.GetComponent<BackPackItem>().sword = false;
                         backpack.GetComponent<BackPackItem>().stage3 = 1;
                     }
                     
