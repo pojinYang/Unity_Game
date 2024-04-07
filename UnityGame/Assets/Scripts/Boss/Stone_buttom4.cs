@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Stone_buttom : MonoBehaviour
+public class Stone_buttom4 : MonoBehaviour
 {
-    // 更改數值以完成按鈕
+    // Start is called before the first frame update
+    public static int Color_num = 4;
+    public bool islight = false;
     void Start()
     {
-        
+        islight = false;
     }
 
     public void turnColor(int c){ //轉變顏色 0灰色 1紅色 2藍色 3黃色 4紫色
@@ -34,4 +36,12 @@ public class Stone_buttom : MonoBehaviour
     {
         
     }
+    void OnTriggerEnter2D(Collider2D other) {
+       islight = true;
+    }
+
+    void OnTriggerExit2D(Collider2D other) {
+        
+    }
+
 }
