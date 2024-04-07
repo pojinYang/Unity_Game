@@ -10,7 +10,7 @@ public class Stone_buttom : MonoBehaviour
         
     }
 
-    void turnColor(int c){ //轉變顏色 0灰色 1紅色 2藍色 3黃色 4紫色
+    public void turnColor(int c){ //轉變顏色 0灰色 1紅色 2藍色 3黃色 4紫色
         if(c == 0){
             this.gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
         }
@@ -26,6 +26,7 @@ public class Stone_buttom : MonoBehaviour
         if(c == 4){
             this.gameObject.GetComponent<SpriteRenderer>().color = new Color(191, 0, 255, 255);
         }
+        Debug.Log("turnColor");
     }
 
     // Update is called once per frame

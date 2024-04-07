@@ -22,7 +22,16 @@ public class StartMenu : MonoBehaviour
         fs = FlowerManager.Instance.CreateFlowerSystem("default", false);
         backpack = GameObject.Find("Backpack");
         player1 = GameObject.Find("Player");
-        
+        fs.RegisterCommand("lock_player_start",(List<string> _params)=>{   
+            player1.GetComponentInParent<TopDownCharacterController>().canPlayerMove = false;
+        });
+        fs.RegisterCommand("unlock_player_start",(List<string> _params)=>{   
+            player1.GetComponentInParent<TopDownCharacterController>().canPlayerMove = true;
+        });
+        fs.RegisterCommand("release_player_start",(List<string> _params)=>{   
+            player1.GetComponentInParent<TopDownCharacterController>().canPlayerMove = true;
+        });
+       
         fs.SetupDialog();
         fs.ReadTextFromResource("start_menu");
 
