@@ -15,6 +15,7 @@ public class Stone_buttom5 : MonoBehaviour
     public void turnColor(int c){ //轉變顏色 0灰色 1紅色 2藍色 3黃色 4紫色
         if(c == 0){
             this.gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+            islight = false;
         }
         if(c == 1){
             this.gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 111, 76, 255);
@@ -37,6 +38,10 @@ public class Stone_buttom5 : MonoBehaviour
         
     }
     void OnTriggerEnter2D(Collider2D other) {
+        if(islight == false){
+            int mycolor = GameObject.Find("Boss").GetComponent<AllButtonController>().ButtonColor[Color_num];
+            GameObject.Find("Boss").GetComponent<AllButtonController>().NumberofLighting[mycolor]++;
+        }
        islight = true;
     }
 
